@@ -1,0 +1,21 @@
+/* Font */
+/* Zinc Colors */
+/* Purple Colors */
+/* Green Colors */
+/* Red Color */
+/* Background Colors */
+/* Accent Color */
+/* Font Colors */
+/* Font Sizes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */

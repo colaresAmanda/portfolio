@@ -1,0 +1,31 @@
+/* Font */
+/* Zinc Colors */
+/* Purple Colors */
+/* Green Colors */
+/* Red Color */
+/* Background Colors */
+/* Accent Color */
+/* Font Colors */
+/* Font Sizes */
+header {
+  background-color: red;
+  z-index: 999;
+}
+
+nav {
+  position: absolute;
+  background-color: blue;
+  z-index: 999;
+  width: 100%;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.menu {
+  background-color: red;
+}
+
+/*# sourceMappingURL=header.css.map */
