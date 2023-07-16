@@ -1,28 +1,155 @@
-@import './partials/variables';
+@import "./partials/variables";
 
 header {
-    // position: absolute;
-    background-color: red;
-    z-index: 999;
+  // position: absolute;
+  background-color: red;
+  z-index: 999;
 }
 
-nav{
+nav {
+  position: fixed;
+  // background-color: blue;
+  background-color: $c-bg-primary;
+  z-index: 999;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+
+  padding: 0.5rem;
+
+  box-shadow: $box-shadow-I;
+}
+
+.brand-name {
+  font-size: $f-size-medium;
+  font-weight: $f-weight-semibold;
+
+  span {
+    color: $c-accent-light;
+  }
+}
+
+.menu {
+  background-color: $c-bg-secondary;
+  position: absolute;
+  width: 100%;
+
+  left: -40rem;
+  top: 0;
+
+  margin-top: 2.85rem;
+  height: calc(100vh - 1.5rem);
+
+  display: flex;
+  padding: 3rem 1rem;
+  justify-content: center;
+
+  list-style: none;
+
+  transition: all 0.5s ease-in-out;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    align-items: center;
+    .menu-item.current a{
+      color: $c-zinc-800;
+    }
+    .menu-item a {
+      color: $f-c-medium;
+      text-decoration: none;
+      &:hover {
+        color: $f-c-dark;
+      }
+    }
+  }
+  &.visible {
+    left: 0;
+  }
+}
+.hamburguer-menu {
+  min-height: 1rem;
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+}
+
+.hamburguer-icon span {
+  content: "";
+  width: 1.5rem;
+  height: 0.15rem;
+  background-color: $c-accent-light;
+  margin: 0.25rem 0;
+
+  display: block;
+  transition: all 0.2s ease-in-out;
+  &:nth-child(1) {
+    transform: rotate(0);
+  }
+}
+
+input[type="checkbox"]:checked + .hamburguer-icon span {
+  margin: 0;
+
+  &:nth-child(1) {
+    transform: rotate(45deg) translate(0.2rem);
+  }
+
+  &:nth-child(2) {
+    width: 0;
+  }
+
+  &:nth-child(3) {
+    transform: rotate(-45deg) translate(0.2rem);
+  }
+}
+
+.toggle-icon {
+  background-color: $c-zinc-350;
+
+  width: 4rem;
+  height: 2rem;
+  border-radius: 10rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  /* "to left" / "to right" - affects initial color */
+  background: linear-gradient(to left, $c-zinc-300 50%, $c-zinc-725 50%) right;
+  background-size: 250%;
+  transition: 0.1s ease-out;
+
+  &::before {
     position: absolute;
-    background-color: blue;
-    z-index: 999;
-    width: 100%;
+    content: "";
+    background-color: $c-accent-light;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border-radius: 50%;
+    margin: 0 0.25rem;
+    transition: all 0.2s ease-in-out;
+  }
 }
 
-.brand-name{
-    font-size: $f-size-medium;
-    font-weight: $f-weight-semibold;
-}
-.brand-name span{
-
-
-}
-
-.menu{
-    background-color: red;
-    
+.toggle-theme {
+  cursor: pointer;
+  input {
+    display: none;
+  }
+  input:checked + .toggle-icon {
+    background-position: left;
+    &::before {
+      background-color: $c-accent-dark;
+      transform: translateX(2rem);
+    }
+  }
 }

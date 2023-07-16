@@ -13,19 +13,131 @@ header {
 }
 
 nav {
-  position: absolute;
-  background-color: blue;
+  position: fixed;
+  background-color: #fff;
   z-index: 999;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  padding: 0.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .brand-name {
   font-size: 1.25rem;
   font-weight: 600;
 }
+.brand-name span {
+  color: #b991ff;
+}
 
 .menu {
-  background-color: red;
+  background-color: #fafafa;
+  position: absolute;
+  width: 100%;
+  left: -40rem;
+  top: 0;
+  margin-top: 2.85rem;
+  height: calc(100vh - 1.5rem);
+  display: flex;
+  padding: 3rem 1rem;
+  justify-content: center;
+  list-style: none;
+  transition: all 0.5s ease-in-out;
+}
+.menu .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.menu .content .menu-item.current a {
+  color: #27272a;
+}
+.menu .content .menu-item a {
+  color: #a1a1aa;
+  text-decoration: none;
+}
+.menu .content .menu-item a:hover {
+  color: #27272a;
+}
+.menu.visible {
+  left: 0;
+}
+
+.hamburguer-menu {
+  min-height: 1rem;
+  display: flex;
+  align-items: center;
+}
+.hamburguer-menu input[type=checkbox] {
+  display: none;
+}
+
+.hamburguer-icon span {
+  content: "";
+  width: 1.5rem;
+  height: 0.15rem;
+  background-color: #b991ff;
+  margin: 0.25rem 0;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+.hamburguer-icon span:nth-child(1) {
+  transform: rotate(0);
+}
+
+input[type=checkbox]:checked + .hamburguer-icon span {
+  margin: 0;
+}
+input[type=checkbox]:checked + .hamburguer-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(0.2rem);
+}
+input[type=checkbox]:checked + .hamburguer-icon span:nth-child(2) {
+  width: 0;
+}
+input[type=checkbox]:checked + .hamburguer-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(0.2rem);
+}
+
+.toggle-icon {
+  background-color: #c8c8d0;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 10rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* "to left" / "to right" - affects initial color */
+  background: linear-gradient(to left, #f4f4f5 50%, #404045 50%) right;
+  background-size: 250%;
+  transition: 0.1s ease-out;
+}
+.toggle-icon::before {
+  position: absolute;
+  content: "";
+  background-color: #b991ff;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin: 0 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-theme {
+  cursor: pointer;
+}
+.toggle-theme input {
+  display: none;
+}
+.toggle-theme input:checked + .toggle-icon {
+  background-position: left;
+}
+.toggle-theme input:checked + .toggle-icon::before {
+  background-color: #7b44f2;
+  transform: translateX(2rem);
 }
 
 /*# sourceMappingURL=header.css.map */

@@ -6,9 +6,14 @@
     box-sizing: border-box;
 
     font-family: $font-family;
+    color: $f-c-dark;
 }
 
 img{
     max-width: 100%;
+}
+
+main{
+    margin-top: 3rem;
 }
 

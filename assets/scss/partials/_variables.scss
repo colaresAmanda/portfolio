@@ -25,8 +25,8 @@ $c-pastel-green-600: #B1F279;
 $c-red-500: #f24444;
 
 /* Background Colors */
-$c-bg-primary: $c-zinc-50;
-$c-bg-secondary: $c-zinc-0;
+$c-bg-primary: $c-zinc-0;
+$c-bg-secondary: $c-zinc-50;
 
 /* Accent Color */
 $c-accent-light: $c-pastel-purple-500;
@@ -42,7 +42,7 @@ $c-accent-hover-dark: $c-purple-500;
 
 /* Font Colors */
 $f-c-light: $c-zinc-0;
-$f-c-medium: $c-zinc-350;
+$f-c-medium: $c-zinc-400;
 $f-c-dark: $c-zinc-800;
 
 /* Font Sizes */
@@ -60,3 +60,6 @@ $f-weight-semibold: 600;
 
 $b-radious-normal: .5rem;
 $b-radious-small: .25rem;
+
+
+$box-shadow-I: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

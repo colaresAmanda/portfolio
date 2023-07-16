@@ -12,10 +12,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  color: #27272a;
 }
 
 img {
   max-width: 100%;
+}
+
+main {
+  margin-top: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

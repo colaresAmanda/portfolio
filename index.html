@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
 
     <title>Amanda Colares | Portfólio</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <h1 class="brand-name">colares<span>Amanda</span></h1>
-            <ul class="menu">
-                <li class="menu-item"><a href="#">Início</a></li>
-                <li class="menu-item"><a href="#">O que faço</a></li>
-                <li class="menu-item"><a href="#">Sobre mim</a></li>
-                <li class="menu-item"><a href="#">Projetos</a></li>
-                <li class="menu-item"><a href="#">Contato</a></li>
-            </ul>
-            <label>
-                <input type="checkbox">
-                <span></span>
-            </label>
-        </nav>
+      <nav>
+        <h1 class="brand-name">colares<span>Amanda</span></h1>
+
+        <ul class="menu">
+          <div class="content">
+            <li class="menu-item current" data-item-name="home"><a href="#home">Início</a></li>
+            <li class="menu-item" data-item-name="services"><a href="#services">O que faço</a></li>
+            <li class="menu-item" data-item-name="about-me"><a href="#about-me">Sobre mim</a></li>
+            <li class="menu-item" data-item-name="projects"><a href="#projects">Projetos</a></li>
+            <li class="menu-item" data-item-name="contact"><a href="#contact">Contato</a></li>
+            <li class="menu-item">
+              <label class="toggle-theme" for="toggle-checkbox">
+                  <input type="checkbox" id="toggle-checkbox">
+                  <div class="toggle-icon"></div>
+              </label>
+            </li>
+          </div>
+          
+        </ul>
+
+        <label class="hamburguer-menu">
+          <input type="checkbox" id="hamburguer-icon-checkbox"/>
+          <div class="hamburguer-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </label>
+      </nav>
     </header>
     <main>
-        <div class="hero">
-            <div class="hero-social">
-
-            </div>
-            <div class="hero-text">
-                <p>Amanda Colares</p>
-                <div class="brand-slogan-1"><h2>Transformo <span>ideas</span> em <span>realidade</span></h2></div>
-                <p>Desenvolvedora web</p>
-            </div>
-            <div class="hero-image">
-                <img src="./assets/img/hero-image.jpeg" alt="Amanda Colares Image">
-            </div>
-            <div class="hero-buttons"></div>
+      <div class="home" id="home">
+        <div class="hero-social"></div>
+        <div class="hero-text">
+          <p>Amanda Colares</p>
+          <div class="brand-slogan-1">
+            <h2>Transformo <span>ideas</span> em <span>realidade</span></h2>
+          </div>
+          <p>Desenvolvedora web</p>
         </div>
+        <div class="hero-image">
+          <img src="./assets/img/hero-image.jpeg" alt="Amanda Colares Image" />
+        </div>
+        <div class="hero-buttons"></div>
+      </div>
+
+      <div class="services" id="services"></div>
     </main>
     <footer></footer>
-</body>
+    <script src="./script.js"></script>p
+  </body>
+
 </html>
