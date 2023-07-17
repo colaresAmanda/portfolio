@@ -1,36 +1,12 @@
 // Function to handle theme-related actions
 function themeActions() {
     const toggleThemeCheckbox = document.querySelector('#toggle-checkbox');
+    const body = document.querySelector('body');
 
     // Event listener for theme toggle checkbox
     toggleThemeCheckbox.addEventListener('click', () => {
-        const lightTheme = toggleThemeCheckbox.checked; // Retrieve the current checkbox state
-        const body = document.querySelector('body');
-
-        // Check if dark theme is enabled
-        if (lightTheme) {
-            body.classList.add('dark'); // Add 'dark' class to body element
-        } else {
-            body.classList.remove('dark'); // Remove 'dark' class from body element
-        }
-
-        // Store the state of the theme toggle checkbox in local storage
-        localStorage.setItem('toggleThemeState', toggleThemeCheckbox.checked);
-    });
-
-    // Check if the theme toggle checkbox state is stored in local storage
-    if (localStorage.getItem('toggleThemeState')) {
-        const isChecked = JSON.parse(localStorage.getItem('toggleThemeState'));
-        toggleThemeCheckbox.checked = isChecked;
-        const body = document.querySelector('body');
-
-        // Apply the stored theme state to the body element
-        if (!isChecked) {
-            body.classList.add('dark'); // Add 'dark' class to body element
-        } else {
-            body.classList.remove('dark'); // Remove 'dark' class from body element
-        }
-    }
+        body.classList.toggle('dark'); 
+    });   
 }
 
 // Function to handle menu-related actions
