@@ -7,11 +7,6 @@
 /* Accent Color */
 /* Font Colors */
 /* Font Sizes */
-header {
-  background-color: red;
-  z-index: 999;
-}
-
 nav {
   position: fixed;
   background-color: #fff;
@@ -21,12 +16,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   top: 0;
-  padding: 0.5rem;
+  padding: 0.25rem 1rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .brand-name {
-  font-size: 1.25rem;
+  position: relative;
+  z-index: 990;
+  font-size: 1rem;
   font-weight: 600;
 }
 .brand-name span {
@@ -37,9 +34,9 @@ nav {
   background-color: #fafafa;
   position: absolute;
   width: 100%;
-  left: -40rem;
+  left: -100%;
   top: 0;
-  margin-top: 2.85rem;
+  margin-top: 2rem;
   height: calc(100vh - 1.5rem);
   display: flex;
   padding: 3rem 1rem;
@@ -59,6 +56,7 @@ nav {
 .menu .content .menu-item a {
   color: #a1a1aa;
   text-decoration: none;
+  font-size: 0.75rem;
 }
 .menu .content .menu-item a:hover {
   color: #27272a;
@@ -78,7 +76,7 @@ nav {
 
 .hamburguer-icon span {
   content: "";
-  width: 1.5rem;
+  width: 1.25rem;
   height: 0.15rem;
   background-color: #b991ff;
   margin: 0.25rem 0;
@@ -103,26 +101,26 @@ input[type=checkbox]:checked + .hamburguer-icon span:nth-child(3) {
 }
 
 .toggle-icon {
-  background-color: #c8c8d0;
-  width: 4rem;
-  height: 2rem;
+  width: 3rem;
+  height: 1.5rem;
   border-radius: 10rem;
   position: relative;
   display: flex;
   align-items: center;
   /* "to left" / "to right" - affects initial color */
-  background: linear-gradient(to left, #f4f4f5 50%, #404045 50%) right;
-  background-size: 250%;
+  background: linear-gradient(to left, #f4f4f5 50%, #27272a 50%) right;
+  border: thin solid #b991ff;
+  background-size: 210%;
   transition: 0.1s ease-out;
 }
 .toggle-icon::before {
   position: absolute;
   content: "";
   background-color: #b991ff;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
-  margin: 0 0.25rem;
+  margin: 0.15rem 0.25rem;
   transition: all 0.2s ease-in-out;
 }
 
@@ -137,7 +135,61 @@ input[type=checkbox]:checked + .hamburguer-icon span:nth-child(3) {
 }
 .toggle-theme input:checked + .toggle-icon::before {
   background-color: #7b44f2;
-  transform: translateX(2rem);
+  transform: translateX(1.25rem);
+}
+
+.dark * {
+  color: #fff;
+}
+.dark nav {
+  background-color: #27272a;
+}
+.dark .brand-name span {
+  color: #7b44f2;
+}
+.dark .menu {
+  background-color: #38383D;
+}
+.dark .menu .content .menu-item.current a {
+  color: #fff;
+}
+.dark .menu .content .menu-item a {
+  color: #a1a1aa;
+}
+.dark .menu .content .menu-item a:hover {
+  color: #fff;
+}
+.dark .toggle-icon {
+  border: thin solid #7b44f2;
+}
+.dark .hamburguer-icon span {
+  background-color: #7b44f2;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hamburguer-menu {
+    display: none;
+  }
+  nav {
+    display: flex;
+  }
+  .menu {
+    background-color: transparent !important;
+    position: relative;
+    width: auto;
+    left: inherit;
+    top: inherit;
+    margin: inherit;
+    height: inherit;
+    padding: 0;
+    list-style: none;
+    transition: inherit;
+  }
+  .menu .content {
+    display: flex;
+    flex-direction: inherit;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

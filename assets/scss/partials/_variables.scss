@@ -28,6 +28,9 @@ $c-red-500: #f24444;
 $c-bg-primary: $c-zinc-0;
 $c-bg-secondary: $c-zinc-50;
 
+$c-bg-primary-dark: $c-zinc-800;
+$c-bg-secondary-dark: $c-zinc-750;
+
 /* Accent Color */
 $c-accent-light: $c-pastel-purple-500;
 $c-accent-hover-light: $c-purple-500;
@@ -46,12 +49,13 @@ $f-c-medium: $c-zinc-400;
 $f-c-dark: $c-zinc-800;
 
 /* Font Sizes */
-$f-size-extra-large: 3.5rem;
-$f-size-large: 3rem;
-$f-size-medium: 1.25rem;
-$f-size-normal: 1rem;
-$f-size-small: 0.875rem;
-$f-size-extra-small: 0.75rem;
+$f-size-extra-large: 3.25rem;
+$f-size-large: 2.75rem;
+$f-size-medium: 1rem;
+$f-size-normal: 0.75rem;
+$f-size-small: 0.625rem;
+$f-size-extra-small: 0.5rem;
+
 
 
 $f-weight-regular: 400;

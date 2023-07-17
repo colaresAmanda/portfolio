@@ -1,14 +1,6 @@
 @import "./partials/variables";
-
-header {
-  // position: absolute;
-  background-color: red;
-  z-index: 999;
-}
-
 nav {
   position: fixed;
-  // background-color: blue;
   background-color: $c-bg-primary;
   z-index: 999;
   width: 100%;
@@ -18,12 +10,14 @@ nav {
   justify-content: space-between;
   top: 0;
 
-  padding: 0.5rem;
+  padding: 0.25rem 1rem;
 
   box-shadow: $box-shadow-I;
 }
 
 .brand-name {
+  position: relative;
+  z-index: 990;
   font-size: $f-size-medium;
   font-weight: $f-weight-semibold;
 
@@ -37,10 +31,10 @@ nav {
   position: absolute;
   width: 100%;
 
-  left: -40rem;
+  left: -100%;
   top: 0;
 
-  margin-top: 2.85rem;
+  margin-top: 2rem;
   height: calc(100vh - 1.5rem);
 
   display: flex;
@@ -57,12 +51,13 @@ nav {
     gap: 2rem;
 
     align-items: center;
-    .menu-item.current a{
+    .menu-item.current a {
       color: $c-zinc-800;
     }
     .menu-item a {
       color: $f-c-medium;
       text-decoration: none;
+      font-size: $f-size-normal;
       &:hover {
         color: $f-c-dark;
       }
@@ -84,7 +79,7 @@ nav {
 
 .hamburguer-icon span {
   content: "";
-  width: 1.5rem;
+  width: 1.25rem;
   height: 0.15rem;
   background-color: $c-accent-light;
   margin: 0.25rem 0;
@@ -113,43 +108,119 @@ input[type="checkbox"]:checked + .hamburguer-icon span {
 }
 
 .toggle-icon {
-  background-color: $c-zinc-350;
-
-  width: 4rem;
-  height: 2rem;
+  width: 3rem;
+  height: 1.5rem;
   border-radius: 10rem;
   position: relative;
   display: flex;
   align-items: center;
 
   /* "to left" / "to right" - affects initial color */
-  background: linear-gradient(to left, $c-zinc-300 50%, $c-zinc-725 50%) right;
-  background-size: 250%;
+  background: linear-gradient(to left, $c-zinc-300 50%, $c-zinc-800 50%) right;
+  border: thin solid $c-accent-light;
+  background-size: 210%;
   transition: 0.1s ease-out;
 
   &::before {
     position: absolute;
     content: "";
     background-color: $c-accent-light;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1rem;
+    height: 1rem;
 
     border-radius: 50%;
-    margin: 0 0.25rem;
+    margin: 0.15rem 0.25rem;
     transition: all 0.2s ease-in-out;
   }
 }
 
 .toggle-theme {
   cursor: pointer;
+
   input {
     display: none;
   }
+
   input:checked + .toggle-icon {
     background-position: left;
     &::before {
       background-color: $c-accent-dark;
-      transform: translateX(2rem);
+      transform: translateX(1.25rem);
+    }
+  }
+}
+
+.dark {
+  * {
+    color: $c-zinc-0;
+  }
+
+  nav {
+    background-color: $c-bg-primary-dark;
+  }
+
+  .brand-name span {
+    color: $c-accent-dark;
+  }
+
+  .menu {
+    background-color: $c-bg-secondary-dark;
+
+    .content {
+      .menu-item.current a {
+        color: $c-zinc-0;
+      }
+      .menu-item a {
+        color: $c-zinc-400;
+        &:hover {
+          color: $c-zinc-0;
+        }
+      }
+    }
+  }
+
+  .toggle-icon {
+    border: thin solid $c-accent-dark;
+  }
+
+
+.hamburguer-icon span {
+  background-color: $c-accent-dark;
+
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hamburguer-menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    // padding: inherit;
+  }
+
+  .menu {
+    background-color: transparent !important;
+    position: relative;
+    width: auto;
+
+    left: inherit;
+    top: inherit;
+
+    margin: inherit;
+    height: inherit;
+
+    padding: 0;
+
+    list-style: none;
+
+    transition: inherit;
+
+    .content {
+      display: flex;
+      flex-direction: inherit;
     }
   }
 }
