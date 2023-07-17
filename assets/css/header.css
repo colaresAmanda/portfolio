@@ -108,7 +108,7 @@ input[type=checkbox]:checked + .hamburguer-icon span:nth-child(3) {
   display: flex;
   align-items: center;
   /* "to left" / "to right" - affects initial color */
-  background: linear-gradient(to left, #f4f4f5 50%, #27272a 50%) right;
+  background: linear-gradient(to left, #f4f4f5 50%, #38383D 50%) right;
   border: thin solid #b991ff;
   background-size: 210%;
   transition: 0.1s ease-out;
@@ -189,6 +189,10 @@ input[type=checkbox]:checked + .hamburguer-icon span:nth-child(3) {
   .menu .content {
     display: flex;
     flex-direction: inherit;
+  }
+  .toggle-icon {
+    background: linear-gradient(to left, #f4f4f5 50%, #27272a 50%) right;
+    background-size: 210%;
   }
 }
 

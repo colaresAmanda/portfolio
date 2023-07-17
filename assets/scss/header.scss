@@ -116,7 +116,7 @@ input[type="checkbox"]:checked + .hamburguer-icon span {
   align-items: center;
 
   /* "to left" / "to right" - affects initial color */
-  background: linear-gradient(to left, $c-zinc-300 50%, $c-zinc-800 50%) right;
+  background: linear-gradient(to left, $c-zinc-300 50%, $c-zinc-750 50%) right;
   border: thin solid $c-accent-light;
   background-size: 210%;
   transition: 0.1s ease-out;
@@ -183,11 +183,9 @@ input[type="checkbox"]:checked + .hamburguer-icon span {
     border: thin solid $c-accent-dark;
   }
 
-
-.hamburguer-icon span {
-  background-color: $c-accent-dark;
-
-}
+  .hamburguer-icon span {
+    background-color: $c-accent-dark;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -222,5 +220,10 @@ input[type="checkbox"]:checked + .hamburguer-icon span {
       display: flex;
       flex-direction: inherit;
     }
+  }
+
+  .toggle-icon {
+    background: linear-gradient(to left, $c-zinc-300 50%, $c-zinc-800 50%) right;
+    background-size: 210%;
   }
 }
