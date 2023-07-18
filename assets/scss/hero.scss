@@ -1,0 +1,252 @@
+@import "./partials/variables";
+.hero {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $c-zinc-0;
+
+  padding: $p-container-mobile;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  p {
+    font-size: $f-size-medium;
+
+    &:last-child {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .brand-slogan-1 {
+    span {
+      &:first-child {
+        color: $c-accent-light;
+      }
+      &:last-child {
+        background-color: $c-accent-secondary-light;
+        padding: 0.25rem 0.5rem;
+        color: $c-zinc-0;
+      }
+    }
+  }
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  width: 100%;
+  height: 18rem;
+  overflow: hidden;
+  &::before {
+    position: relative;
+    z-index: 1;
+    content: "";
+    width: 16rem;
+    height: 16rem;
+    display: block;
+    background-color: $c-zinc-0;
+    box-shadow: $box-shadow-I;
+
+    border-radius: 50%;
+  }
+
+  img {
+    position: relative;
+    z-index: 2;
+
+    object-fit: cover;
+    width: 15rem;
+    height: 14rem;
+    border-radius: 50%;
+
+    top: -16rem;
+    margin-bottom: -15rem;
+    // left: .15rem;
+  }
+
+  @keyframes parent-circle {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes child-circles {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .hero-icons {
+    content: "";
+    width: 16rem;
+    height: 16rem;
+    display: block;
+    border-radius: 50%;
+    z-index: 3;
+
+    margin-top: -15rem;
+
+    position: relative;
+    top: -1rem;
+
+    animation: parent-circle 25s linear infinite;
+    // perspective: 16rem;
+    // transform: rotateY(40deg);
+    // transform: skew(0,-10deg);
+    .hero-icon {
+      animation: child-circles 25s linear infinite;
+      position: relative;
+      border-radius: 50%;
+      // font-size: 1.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: $c-zinc-0;
+      box-shadow: $box-shadow-I;
+
+      padding: 0.5rem;
+      // color: $c-zinc-0;
+      background-color: $c-zinc-0;
+
+      &:nth-child(1) {
+        position: relative;
+        top: 1rem;
+        left: 2rem;
+      }
+      &:nth-child(2) {
+        position: relative;
+        top: 0rem;
+        left: 3rem;
+      }
+      &:nth-child(3) {
+        position: relative;
+        top: 0rem;
+        left: 4rem;
+      }
+      &:nth-child(4) {
+        position: relative;
+        top: 2rem;
+        left: 4rem;
+      }
+      &:nth-child(5) {
+        position: relative;
+        top: 5rem;
+        left: 3rem;
+      }
+      &:nth-child(6) {
+        position: relative;
+        top: 12rem;
+        left: 3rem;
+      }
+      &:nth-child(7) {
+        position: relative;
+        top: 13rem;
+        left: 4rem;
+      }
+    }
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero-social-icons {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    display: grid;
+    grid-template-areas:
+      "text text image"
+      "text text image"
+      "buttons buttons image";
+
+    width: 100%;
+    justify-content: center;
+
+    padding: $p-container-tablet;
+
+  }
+
+  .hero-text {
+    grid-area: text;
+    align-self: center;
+
+    .brand-slogan-1 {
+      font-size: $f-size-large;
+    }
+  }
+  .hero-image {
+    grid-area: image;
+    margin-left: 3rem;
+    width: 20rem;
+
+  }
+  .hero-buttons {
+    grid-area: buttons;
+
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+
+    .button {
+      width: 100%;
+      min-width: 12rem;
+    }
+    gap: 0.5rem;
+    // background-color: yellow;
+  }
+}
+
+// color theme
+.dark {
+  .hero {
+    background-color: $c-zinc-750;
+  }
+
+  .hero-text {
+    p {
+      color: $c-zinc-0;
+    }
+
+    .brand-slogan-1 {
+      color: $c-zinc-0;
+
+      span {
+        &:first-child {
+          color: $c-accent-dark;
+        }
+        &:last-child {
+          background-color: $c-accent-secondary-dark;
+          padding: 0.25rem 0.5rem;
+          color: $c-zinc-0;
+        }
+      }
+    }
+  }
+
+  .hero-image {
+    &::before {
+      background-color: $c-zinc-800;
+    }
+
+    .hero-icon {
+      background-color: $c-zinc-800;
+    }
+  }
+}

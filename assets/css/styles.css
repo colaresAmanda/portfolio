@@ -20,7 +20,66 @@ img {
 }
 
 main {
-  margin-top: 3rem;
+  margin-top: 2rem;
+}
+
+.button {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+.button.primary-button {
+  background-color: #b991ff;
+  border: medium solid #b991ff;
+  border-radius: 0.25rem;
+  color: #fff;
+  background: linear-gradient(to left, #b991ff 50%, #7b44f2 50%) right;
+  background-size: 200%;
+  transition: all 0.5s ease-in-out;
+}
+.button.primary-button:hover {
+  background-position: left;
+  border: medium solid #7b44f2;
+}
+.button.secondary-button {
+  background-color: transparent;
+  border: medium solid #b991ff;
+  border-radius: 0.25rem;
+  color: #b991ff;
+  background: linear-gradient(to left, transparent 50%, #b991ff 50%) right;
+  background-size: 200%;
+  transition: all 0.5s ease-in-out;
+}
+.button.secondary-button:hover {
+  color: #fff;
+  background-position: left;
+}
+
+.dark .button.primary-button {
+  border: medium solid #7b44f2;
+  border-radius: 0.25rem;
+  color: #fff;
+  background: linear-gradient(to left, #7b44f2 50%, #7b44f2 50%) right;
+}
+.dark .button.primary-button:hover {
+  border: medium solid #7b44f2;
+}
+.dark .button.secondary-button {
+  background-color: transparent;
+  border: medium solid #7b44f2;
+  border-radius: 0.25rem;
+  color: #7b44f2;
+  background: linear-gradient(to left, transparent 50%, #7b44f2 50%) right;
+  background-size: 200%;
+  transition: all 0.5s ease-in-out;
+}
+.dark .button.secondary-button:hover {
+  color: #fff;
+  background-position: left;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -13,8 +13,18 @@
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/hero.css" />
+    <link rel="stylesheet" href="./assets/css/services.css" />
+
+    <!-- icons -->
+    <link rel="stylesheet" href="./assets/fonts/style.css" />
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> -->
 
     <title>Amanda Colares | Portfólio</title>
+
+
+          
   </head>
   <body>
     <header>
@@ -23,7 +33,7 @@
 
         <ul class="menu">
           <div class="content">
-            <li class="menu-item current"><a href="#home">Início</a></li>
+            <li class="menu-item current"><a href="#hero">Início</a></li>
             <li class="menu-item"><a href="#services">O que faço</a></li>
             <li class="menu-item"><a href="#about-me">Sobre mim</a></li>
             <li class="menu-item"><a href="#projects">Projetos</a></li>
@@ -47,25 +57,77 @@
       </nav>
     </header>
     <main>
-      <div class="home" id="home">
-        <div class="hero-social"></div>
+      <div class="hero" id="hero">
+        <div class="hero-social-icons">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="hero-text">
           <p>Amanda Colares</p>
-          <div class="brand-slogan-1">
-            <h2>Transformo <span>ideas</span> em <span>realidade</span></h2>
-          </div>
+          <h2 class="brand-slogan-1">
+            Transformo <span>ideas</span> em <span>realidade</span>
+          </h2>
           <p>Desenvolvedora web</p>
         </div>
         <div class="hero-image">
+          <div class="hero-icons">
+            <img src="./assets/img/svg_repo/vscode_icons/html.svg" class="hero-icon"></img>
+            <img src="./assets/img/svg_repo/vscode_icons/css.svg" class="hero-icon"></img>
+            <img src="./assets/img/svg_repo/vscode_icons/scss.svg" class="hero-icon"></img>
+            <img src="./assets/img/svg_repo/vscode_icons/js.svg" class="hero-icon"></img>
+            <img src="./assets/img/svg_repo/vscode_icons/figma.svg" class="hero-icon"></img>
+            <img src="./assets/img/svg_repo/vscode_icons/java.svg" class="hero-icon"></img>
+            <img src="./assets/img/svg_repo/vscode_icons/git.svg" class="hero-icon"></img>    
+          </div>
+          
           <img src="./assets/img/hero-image.jpeg" alt="Amanda Colares Image" />
         </div>
-        <div class="hero-buttons"></div>
+        <div class="hero-buttons">
+          <a href="#about-me" class="button primary-button">Sobre mim</a>
+          <a href="#contact" class="button secondary-button">Contato</a>
+        </div>
       </div>
 
-      <div class="services" id="services"></div>
+      <div class="services" id="services">
+        <h2>O que eu faço?</h2>
+        <div class="cards">
+          <div class="card">
+            <h3 class="card-title"></h3>
+            <p class="card-text"></p>
+
+            <a href="#projects&type=design" class="card-button">Botão</a>
+          </div>
+          <div class="card">
+            <h3 class="card-title"></h3>
+            <p class="card-text"></p>
+
+            <a href="#projects&type=frontend" class="card-button">Botão</a>
+          </div>
+          <div class="card">
+            <h3 class="card-title"></h3>
+            <p class="card-text"></p>
+
+            <a href="#projects&type=backend" class="card-button">Botão</a>
+          </div>
+        </div>
+      </div>
+      <div class="about-me" id="about-me">
+        <h2>Sobre mim</h2>
+
+      </div>  
+      <div class="projects" id="projects">
+        <h2>Projects</h2>
+
+      </div>  
+      <div class="contact" id="contact">
+        <h2>Contact</h2>
+
+      </div>  
     </main>
     <footer></footer>
-    <script src="./script.js"></script>
-    p
+    <script src="./header.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

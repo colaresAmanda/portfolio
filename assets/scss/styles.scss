@@ -1,19 +1,112 @@
-@import './partials/variables';
-*{
-    margin: 0;
-    padding: 0;
+@import "./partials/variables";
+* {
+  margin: 0;
+  padding: 0;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    font-family: $font-family;
-    color: $f-c-dark;
+  font-family: $font-family;
+  color: $f-c-dark;
 }
 
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 
-main{
-    margin-top: 3rem;
+main {
+  margin-top: 2rem;
 }
 
+.button {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: $f-weight-semibold;
+  font-size: $f-size-normal;
+  text-decoration: none;
+  &.primary-button {
+    background-color: $c-accent-light;
+    border: medium solid $c-accent-light;
+    border-radius: $b-radious-small;
+
+    color: $c-zinc-0;
+
+    background: linear-gradient(
+        to left,
+        $c-accent-light 50%,
+        $c-accent-hover-light 50%
+      )
+      right;
+    background-size: 200%;
+
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background-position: left;
+      border: medium solid $c-accent-hover-light;
+    }
+  }
+
+  &.secondary-button {
+    background-color: transparent;
+    border: medium solid $c-accent-light;
+    border-radius: $b-radious-small;
+
+    color: $c-accent-light;
+    background: linear-gradient(to left, transparent 50%, $c-accent-light 50%)
+      right;
+    background-size: 200%;
+
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      color: $c-zinc-0;
+      background-position: left;
+    }
+  }
+}
+
+
+.dark{
+
+
+.button {
+    &.primary-button {
+      border: medium solid $c-accent-dark;
+      border-radius: $b-radious-small;
+  
+      color: $c-zinc-0;
+  
+      background: linear-gradient(
+          to left,
+          $c-accent-dark 50%,
+          $c-accent-hover-dark 50%
+        )
+        right;
+  
+  
+      &:hover {
+        border: medium solid $c-accent-hover-dark;
+      }
+    }
+  
+    &.secondary-button {
+      background-color: transparent;
+      border: medium solid $c-accent-dark;
+      border-radius: $b-radious-small;
+  
+      color: $c-accent-dark;
+      background: linear-gradient(to left, transparent 50%, $c-accent-dark 50%)
+        right;
+      background-size: 200%;
+  
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        color: $c-zinc-0;
+        background-position: left;
+      }
+    }
+  }
+  
+}

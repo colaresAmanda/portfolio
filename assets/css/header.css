@@ -16,7 +16,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   top: 0;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -138,11 +138,11 @@ input[type=checkbox]:checked + .hamburguer-icon span:nth-child(3) {
   transform: translateX(1.25rem);
 }
 
-.dark * {
-  color: #fff;
-}
 .dark nav {
   background-color: #27272a;
+}
+.dark .brand-name {
+  color: #fff;
 }
 .dark .brand-name span {
   color: #7b44f2;
