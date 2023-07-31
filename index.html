@@ -15,16 +15,16 @@
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/hero.css" />
     <link rel="stylesheet" href="./assets/css/services.css" />
+    <link rel="stylesheet" href="./assets/css/about-me.css" />
+    <link rel="stylesheet" href="./assets/css/education.css" />
 
     <!-- icons -->
     <link rel="stylesheet" href="./assets/fonts/style.css" />
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> -->
 
+    <meta name="format-detection" content="telephone=no" />
     <title>Amanda Colares | Portfólio</title>
-
-
-          
   </head>
   <body>
     <header>
@@ -33,11 +33,12 @@
 
         <ul class="menu">
           <div class="content">
-            <li class="menu-item current"><a href="#hero">Início</a></li>
-            <li class="menu-item"><a href="#services">O que faço</a></li>
-            <li class="menu-item"><a href="#about-me">Sobre mim</a></li>
-            <li class="menu-item"><a href="#projects">Projetos</a></li>
-            <li class="menu-item"><a href="#contact">Contato</a></li>
+            <li class="menu-item current"><a href="#">Início</a></li>
+            <li class="menu-item"><a href="#">O que faço</a></li>
+            <li class="menu-item"><a href="#">Sobre mim</a></li>
+            <li class="menu-item"><a href="#">Educação</a></li>
+            <li class="menu-item"><a href="#">Projetos</a></li>
+            <li class="menu-item"><a href="#">Contato</a></li>
             <li class="menu-item">
               <label class="toggle-theme" for="toggle-checkbox">
                 <input type="checkbox" id="toggle-checkbox" />
@@ -57,74 +58,347 @@
       </nav>
     </header>
     <main>
-      <div class="hero" id="hero">
+      <section class="hero visible" id="hero">
         <div class="hero-social-icons">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="icon-linkedin"></span>
+          <span class="icon-github"></span>
+          <span class="icon-figma"></span>
+          <span class="icon-instagram"></span>
         </div>
         <div class="hero-text">
           <p>Amanda Colares</p>
           <h2 class="brand-slogan-1">
-            Transformo <span>ideas</span> em <span>realidade</span>
+            Transformo <span>ideias</span> em <span>realidade</span>
           </h2>
           <p>Desenvolvedora web</p>
         </div>
         <div class="hero-image">
           <div class="hero-icons">
-            <img src="./assets/img/svg_repo/vscode_icons/html.svg" class="hero-icon"></img>
-            <img src="./assets/img/svg_repo/vscode_icons/css.svg" class="hero-icon"></img>
-            <img src="./assets/img/svg_repo/vscode_icons/scss.svg" class="hero-icon"></img>
-            <img src="./assets/img/svg_repo/vscode_icons/js.svg" class="hero-icon"></img>
-            <img src="./assets/img/svg_repo/vscode_icons/figma.svg" class="hero-icon"></img>
-            <img src="./assets/img/svg_repo/vscode_icons/java.svg" class="hero-icon"></img>
-            <img src="./assets/img/svg_repo/vscode_icons/git.svg" class="hero-icon"></img>    
+            <img
+              src="./assets/img/svg_repo/vscode_icons/html.svg"
+              class="hero-icon"
+            />
+            <img
+              src="./assets/img/svg_repo/vscode_icons/css.svg"
+              class="hero-icon"
+            />
+            <img
+              src="./assets/img/svg_repo/vscode_icons/scss.svg"
+              class="hero-icon"
+            />
+            <img
+              src="./assets/img/svg_repo/vscode_icons/js.svg"
+              class="hero-icon"
+            />
+            <img
+              src="./assets/img/svg_repo/vscode_icons/figma.svg"
+              class="hero-icon"
+            />
+            <img
+              src="./assets/img/svg_repo/vscode_icons/java.svg"
+              class="hero-icon"
+            />
+            <img
+              src="./assets/img/svg_repo/vscode_icons/git.svg"
+              class="hero-icon"
+            />
           </div>
-          
+
           <img src="./assets/img/hero-image.jpeg" alt="Amanda Colares Image" />
         </div>
         <div class="hero-buttons">
           <a href="#about-me" class="button primary-button">Sobre mim</a>
           <a href="#contact" class="button secondary-button">Contato</a>
         </div>
-      </div>
+      </section>
 
-      <div class="services" id="services">
-        <h2>O que eu faço?</h2>
+      <section class="services" id="services">
+        <h2 class="title">O que eu faço?</h2>
         <div class="cards">
           <div class="card">
-            <h3 class="card-title"></h3>
-            <p class="card-text"></p>
+            <i class="card-icon icon-color"></i>
+            <h3 class="card-title">Design de interfaces</h3>
+            <p class="card-text">
+              Crio designs seguindo um estilo minimalista, buscando capturar a
+              atenção do usuário e transmitir informações de
+              <span>forma clara</span> e <span>eficiente</span>.
+            </p>
 
-            <a href="#projects&type=design" class="card-button">Botão</a>
+            <a href="#projects&type=design" class="card-button">Ver Projetos</a>
           </div>
           <div class="card">
-            <h3 class="card-title"></h3>
-            <p class="card-text"></p>
+            <i class="card-icon icon-computer"></i>
+            <h3 class="card-title">Desenvolvimento frontend</h3>
+            <p class="card-text">
+              Desenvolvo websites <span>interativos</span> e
+              <span>responsivos</span>, visando proporcionar uma experiência de
+              usuário dinâmica e agradável.
+            </p>
 
-            <a href="#projects&type=frontend" class="card-button">Botão</a>
+            <a href="#projects&type=frontend" class="card-button"
+              >Ver Projetos</a
+            >
           </div>
           <div class="card">
-            <h3 class="card-title"></h3>
-            <p class="card-text"></p>
+            <i class="card-icon icon-puzzle"></i>
+            <h3 class="card-title">Desenvolvimento backend</h3>
+            <p class="card-text">
+              Trabalho no desenvolvimento de APIs que priorizam a
+              <span>segurança</span> e <span>escalabilidade</span>, garantindo
+              um funcionamento eficiente e confiável dos aplicativos e sistemas.
+            </p>
 
-            <a href="#projects&type=backend" class="card-button">Botão</a>
+            <a href="#projects&type=backend" class="card-button"
+              >Ver Projetos</a
+            >
           </div>
         </div>
-      </div>
-      <div class="about-me" id="about-me">
-        <h2>Sobre mim</h2>
+      </section>
+      <section class="about-me" id="about-me">
+        <h2 class="title">Sobre mim</h2>
 
-      </div>  
-      <div class="projects" id="projects">
+        <div class="content">
+          <p class="about-me-description">
+            Me chamo Amanda, tenho 19 anos e acabei de me formar como técnica em
+            informática. Atualmente trabalho na área de TI de uma escola e busco
+            migrar para a área de desenvolvimento. Sou muito interessada no
+            desenvolvimento para web, gosto de produzir tanto o design quanto o
+            código final. Atualmente, estou aprofundando meus conhecimentos no
+            frontend, estudando HTML, Sass e JavaScript. Meu objetivo é utilizar
+            as melhores tecnologias para desenvolver aplicações dinâmicas e que
+            visam a usabilidade do usuário.
+          </p>
+
+          <div class="soft-skills">
+            <h3 class="subtitle">Soft Skills</h3>
+            <div class="skills">
+              <div class="skill">
+                <div class="skill-container">
+                  <span class="skill-icon icon-alarm"></span>
+                  <p class="skill-text">Pontualidade</p>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-container">
+                  <span class="skill-icon icon-plan"></span>
+                  <p class="skill-text">Responsabilidade</p>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-container">
+                  <span class="skill-icon icon-lamp"></span>
+                  <p class="skill-text">Criatividade</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="cv-button button secondary-button">Curriculum vitæ</a>
+        </div>
+      </section>
+      <section class="education" id="education">
+        <div class="titles">
+          <h2 class="education-title selected" id="education-title-education">Educação</h2>
+          <h2 class="education-title" id="education-title-certification">Certificados</h2>
+        </div>
+
+        <div class="education-container">
+          <div class="timeline-items">
+            <div class="timeline-item">
+              <div class="item-content">
+                <div class="left-area">
+                  <div class="header-info">
+                    <h3>Instituto caldeira</h3>
+                    <p>05/2023 - 07/2023</p>
+                  </div>
+                  <div class="content">
+                    <p class="content-title">Programa Nova Geração</p>
+                    <p class="text">
+                      Nesse programa, nós tive que completar uma trilha na
+                      plataforma da Alura onde aproveitei para rever os
+                      conceitos de lógica de programação, manipulação do DOM com
+                      JavaScript, orientação a objetos e polimorfismo com Java.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="right-area">
+                  <div class="img-container">
+                    <img
+                      src="https://cdn.treedis.com/clients/10288/logo.png"
+                      alt="Instituto Caldeira Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="item-content">
+                <div class="left-area">
+                  <div class="header-info">
+                    <h3>Senac</h3>
+                    <p>04/2021 - 05/2022</p>
+                  </div>
+                  <div class="content">
+                    <p class="content-title">
+                      Técnico em informática para a internet
+                    </p>
+                    <p class="text">
+                      Neste curso aprendi sobre algumas metodologias agéis como
+                      Scrum e Kanban, Aprendi também sobre orientação a objetos
+                      e desenvolvimento web com C# utilizando o .NET 5 e padrão
+                      MVC.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="right-area">
+                  <div class="img-container">
+                    <img
+                      src="https://logodownload.org/wp-content/uploads/2014/10/senac-logo-0.png"
+                      alt="Senac Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="item-content">
+                <div class="left-area">
+                  <div class="header-info">
+                    <h3>IFSUL</h3>
+                    <p>06/2019 - 07/2023</p>
+                  </div>
+                  <div class="content">
+                    <p class="content-title">Técnico em informática</p>
+                    <p class="text">
+                      Durante o curso tive contato com diversas tecnologias.
+                      Aprendi desde lógica de programação com C até
+                      desenvolvimento web utilizando Javascript.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="right-area">
+                  <div class="img-container">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Instituto_Federal_Marca_2015.svg/1200px-Instituto_Federal_Marca_2015.svg.png"
+                      alt="IFSUL Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="certifications">
+            <!-- <div class="certifications-wrapper"> -->
+              <div class="certification">
+                <div class="left-area">
+                  <p>Instituto Caldeira</p>
+                  <h3 class="certification-title">Nova geração | Programação</h3>
+                  <a href="https://cursos.alura.com.br/user/colaresAmanda/fullCertificate/ddc0bbfc218304fcfc02d0f17ab95417" class="certification-link" target="_blank">Acessar certificado</a>
+
+                  <div class="tags">
+                    
+                    <p>Html</p>
+                    <p>Css</p>
+                    <p>Javascript</p>
+                    <p>Java</p>
+                    <p>Git</p>
+                  </div>
+
+                </div>
+                <div class="right-area">
+                  <div class="img-container">
+                    <img
+                      src="https://cdn.treedis.com/clients/10288/logo.png"
+                      alt="Instituto Caldeira Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="certification">
+                <div class="left-area">
+                  <p>Matheus Battisti</p>
+                  <h3 class="certification-title">React do Zero a Maestria</h3>
+                  <a href="#" class="certification-link">Acessar certificado</a>
+
+                  <div class="tags">
+                    <p>Javascript</p>
+                    <p>Typescript</p>
+                    <p>React</p>
+                    <p>Firebase</p>
+                    <p>Mongodb</p>
+                    <p>Node.js</p>
+
+                  </div>
+                </div>
+                <div class="right-area">
+                  <div class="img-container">
+                    <img
+                      src="https://img-b.udemycdn.com/user/200_H/224646276_6ee6.jpg"
+                      alt="Hora de Codar Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="certification">
+                <div class="left-area">
+                  <p>English Club</p>
+                  <h3 class="certification-title">Inglês</h3>
+                  <a href="#" class="certification-link">Acessar certificado</a>
+
+                  <div class="tags">
+                   <p>Idiomas</p>
+                  </div>
+                </div>
+                <div class="right-area">
+                  <div class="img-container">
+                    <img
+                      src="https://img-b.udemycdn.com/user/200_H/224646276_6ee6.jpg"
+                      alt="Hora de Codar Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="certification">
+                <div class="left-area">
+                  <p>Topway</p>
+                  <h3 class="certification-title">Inglês</h3>
+                  <a href="#" class="certification-link">Acessar certificado</a>
+
+                  <div class="tags">
+                   <p>Idiomas</p>
+                  </div>
+                </div>
+                <div class="right-area">
+                  <div class="img-container">
+                    <img
+                      src="https://img-b.udemycdn.com/user/200_H/224646276_6ee6.jpg"
+                      alt="Hora de Codar Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              
+            <!-- </div> -->
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
         <h2>Projects</h2>
-
-      </div>  
-      <div class="contact" id="contact">
+      </section>
+      <section class="contact" id="contact">
         <h2>Contact</h2>
-
-      </div>  
+      </section>
     </main>
     <footer></footer>
     <script src="./header.js"></script>

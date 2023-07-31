@@ -7,6 +7,8 @@
 
   font-family: $font-family;
   color: $f-c-dark;
+
+  scroll-behavior: smooth;
 }
 
 img {
@@ -15,6 +17,8 @@ img {
 
 main {
   margin-top: 2rem;
+  width: 100%;
+  overflow: hidden;
 }
 
 .button {
@@ -26,6 +30,11 @@ main {
   font-weight: $f-weight-semibold;
   font-size: $f-size-normal;
   text-decoration: none;
+
+  &:hover{
+    cursor: pointer;
+  }
+
   &.primary-button {
     background-color: $c-accent-light;
     border: medium solid $c-accent-light;
@@ -68,39 +77,108 @@ main {
 }
 
 
-.dark{
+
+.title {
+  font-size: $f-size-large;
+  &::after {
+    content: "";
+    height: 0.25rem;
+    width: 70%;
+    display: block;
+    margin-top: -0.55rem;
+  }
+
+  // &:nth-child(odd) {
+  //   &::after {
+  //     background-color: $c-accent-secondary-light;
+  //   }
+  // }
+  // &:nth-child(even) {
+  //   &::after {
+  //     background-color: $c-accent-light;
+  //   }
+  // }
+}
+
+section {
+  // background-color: blue;
+
+  &:nth-child(odd) {
+    .title {
+      &::after {
+        background-color: $c-accent-light;
+      }
+    }
+
+    // transform: translateX(100%);
+
+    // transition: all .5s ease-in-out;
+    // &.visible{
+    // transform: translateX(0);
+    // }
+  }
+  &:nth-child(even) {
+    .title {
+      &::after {
+        background-color: $c-accent-secondary-light;
+      }
+    }
+   
+    // transform: translateX(-100%);
+
+    // transition: all .5s ease-in-out;
+    // &.visible{
+    // transform: translateX(0);
+    // }
+  }
+}
 
 
-.button {
+
+
+.subtitle{
+  font-size: $f-size-medium;
+  &::after {
+    content: "";
+    height: 0.25rem;
+    width: 30%;
+    display: block;
+    margin-top: -0.55rem;
+    background-color: $c-accent-secondary-light;
+  }
+}
+
+.dark {
+  .button {
+    
     &.primary-button {
       border: medium solid $c-accent-dark;
       border-radius: $b-radious-small;
-  
+
       color: $c-zinc-0;
-  
+
       background: linear-gradient(
           to left,
           $c-accent-dark 50%,
           $c-accent-hover-dark 50%
         )
         right;
-  
-  
+
       &:hover {
         border: medium solid $c-accent-hover-dark;
       }
     }
-  
+
     &.secondary-button {
       background-color: transparent;
       border: medium solid $c-accent-dark;
       border-radius: $b-radious-small;
-  
+
       color: $c-accent-dark;
       background: linear-gradient(to left, transparent 50%, $c-accent-dark 50%)
         right;
       background-size: 200%;
-  
+
       transition: all 0.5s ease-in-out;
       &:hover {
         color: $c-zinc-0;
@@ -108,5 +186,75 @@ main {
       }
     }
   }
-  
+
+
+.title {
+  color: $c-zinc-0;
 }
+
+section {
+  &:nth-child(odd) {
+    .title {
+      &::after {
+        background-color: $c-accent-dark;
+      }
+    }
+  }
+  &:nth-child(even) {
+    .title {
+      &::after {
+        background-color: $c-accent-secondary-dark;
+      }
+    }
+  }
+}
+
+.subtitle{
+  color: $c-zinc-0;
+  &::after {
+    background-color: $c-accent-secondary-dark;
+  }
+}
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    &::after {
+      width: 30%;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ 
+
+.subtitle{
+  display: flex;
+  justify-content: flex-end;
+  text-align:end;
+  font-size: $f-size-medium;
+  &::after {
+    content: "";
+    height: 0.25rem;
+    width: 30%;
+    display: block;
+    margin-top: -0.55rem;
+    background-color: $c-accent-secondary-light;
+
+    margin-left: -30%;
+    position: relative;
+    top: 1.65rem;
+  }
+}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .title {
+    &::after {
+      width: 20%;
+    }
+  }
+}
+

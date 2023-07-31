@@ -13,6 +13,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   color: #27272a;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -21,6 +22,8 @@ img {
 
 main {
   margin-top: 2rem;
+  width: 100%;
+  overflow: hidden;
 }
 
 .button {
@@ -31,6 +34,9 @@ main {
   font-weight: 600;
   font-size: 0.75rem;
   text-decoration: none;
+}
+.button:hover {
+  cursor: pointer;
 }
 .button.primary-button {
   background-color: #b991ff;
@@ -59,6 +65,36 @@ main {
   background-position: left;
 }
 
+.title {
+  font-size: 1.5rem;
+}
+.title::after {
+  content: "";
+  height: 0.25rem;
+  width: 70%;
+  display: block;
+  margin-top: -0.55rem;
+}
+
+section:nth-child(odd) .title::after {
+  background-color: #b991ff;
+}
+section:nth-child(even) .title::after {
+  background-color: #B1F279;
+}
+
+.subtitle {
+  font-size: 1rem;
+}
+.subtitle::after {
+  content: "";
+  height: 0.25rem;
+  width: 30%;
+  display: block;
+  margin-top: -0.55rem;
+  background-color: #B1F279;
+}
+
 .dark .button.primary-button {
   border: medium solid #7b44f2;
   border-radius: 0.25rem;
@@ -80,6 +116,53 @@ main {
 .dark .button.secondary-button:hover {
   color: #fff;
   background-position: left;
+}
+.dark .title {
+  color: #fff;
+}
+.dark section:nth-child(odd) .title::after {
+  background-color: #7b44f2;
+}
+.dark section:nth-child(even) .title::after {
+  background-color: #84f216;
+}
+.dark .subtitle {
+  color: #fff;
+}
+.dark .subtitle::after {
+  background-color: #84f216;
+}
+
+@media only screen and (min-width: 768px) {
+  .title::after {
+    width: 30%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .subtitle {
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    font-size: 1rem;
+  }
+  .subtitle::after {
+    content: "";
+    height: 0.25rem;
+    width: 30%;
+    display: block;
+    margin-top: -0.55rem;
+    background-color: #B1F279;
+    margin-left: -30%;
+    position: relative;
+    top: 1.65rem;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .title::after {
+    width: 20%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

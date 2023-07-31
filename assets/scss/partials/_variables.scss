@@ -55,8 +55,8 @@ $f-c-medium: $c-zinc-400;
 $f-c-dark: $c-zinc-800;
 
 /* Font Sizes */
-$f-size-extra-large: 3.25rem;
-$f-size-large: 2rem;
+$f-size-extra-large: 2rem;
+$f-size-large: 1.5rem;
 $f-size-medium: 1rem;
 $f-size-normal: 0.75rem;
 $f-size-small: 0.625rem;
@@ -75,5 +75,7 @@ $b-radious-small: .25rem;
 $box-shadow-I: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 
-$p-container-mobile: 2rem 2rem;
+$p-container-mobile: 2rem 2.5rem;
 $p-container-tablet: 3rem 10rem;
+
+$colors: hsl(262, 100%, 60%), hsl(230, 100%, 70%), hsl(93, 100%, 50%), hsl(294, 100%, 75%),hsl(33, 100%, 60%), #FF5E6E;

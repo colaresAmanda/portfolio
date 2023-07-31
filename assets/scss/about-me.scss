@@ -1,0 +1,200 @@
+@import "./partials/variables";
+
+.about-me {
+  padding: $p-container-mobile;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.about-me.visible {
+
+  .title,
+  .about-me-description,
+  .cv-button {
+    transition: all .5s ease-in-out;
+    transform: translateX(0);
+  }
+
+  .soft-skills{
+    transition: all .7s ease-in-out;
+
+    transform: translateX(0);
+  }
+  
+}
+
+.about-me {
+  .title,
+  .about-me-description,
+  .cv-button {
+    transform: translateX(-120%);
+  }
+  .title{
+    transition: all .6s ease-in-out;
+  }
+  .about-me-description{
+    transition: all .7s ease-in-out;
+  }
+  .cv-button{
+    transition: all .5s ease-in-out;
+  }
+
+  .soft-skills{
+    transition: all .9s ease-in-out;
+
+    transform: translateX(90rem);
+  }
+}
+
+.about-me-description {
+  margin-top: 1rem;
+  font-size: $f-size-normal;
+  text-align: justify;
+}
+
+.soft-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 10rem;
+
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+
+    &:nth-child(even) {
+      background-color: $c-accent-secondary-light;
+      p {
+        color: $c-accent-secondary-light;
+      }
+      .skill-icon {
+        color: $c-accent-secondary-light;
+      }
+    }
+    &:nth-child(odd) {
+      background-color: $c-accent-light;
+      p {
+        color: $c-accent-light;
+      }
+      .skill-icon {
+        color: $c-accent-light;
+      }
+    }
+
+    .skill-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 8rem;
+      width: 8rem;
+      background-color: $c-zinc-0;
+      border-radius: 0.5rem;
+
+      p {
+        font-size: $f-size-normal;
+      }
+
+      .skill-icon {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.dark {
+  .about-me {
+    background-color: $c-zinc-775;
+  }
+
+  .about-me-description {
+    margin-top: 1rem;
+    font-size: $f-size-normal;
+    text-align: justify;
+
+    color: $c-zinc-0;
+  }
+
+  .soft-skills {
+    .skills {
+    }
+    .skill {
+      &:nth-child(even) {
+        background-color: $c-accent-secondary-dark;
+        p {
+          color: $c-accent-secondary-dark;
+        }
+        .skill-icon {
+          color: $c-accent-secondary-dark;
+        }
+      }
+      &:nth-child(odd) {
+        background-color: $c-accent-dark;
+        p {
+          color: $c-accent-dark;
+        }
+        .skill-icon {
+          color: $c-accent-dark;
+        }
+      }
+
+      .skill-container {
+        // background-color: $c-zinc-;
+        border-radius: 0.5rem;
+
+        p {
+          font-size: $f-size-normal;
+        }
+
+        .skill-icon {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .about-me {
+    padding: $p-container-tablet;
+  }
+  .about-me .content {
+    display: grid;
+    grid-template-areas:
+      "description soft-skills soft-skills"
+      "description soft-skills soft-skills"
+      "cv-button soft-skills soft-skills";
+  }
+
+  .about-me-description {
+    grid-area: description;
+  }
+
+  .soft-skills {
+    grid-area: soft-skills;
+    align-self: self-start;
+
+    margin-top: -2rem;
+    margin-left: 5rem;
+  }
+
+  .cv-button {
+    grid-area: cv-button;
+  }
+}

@@ -2,6 +2,7 @@
 .hero {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 
   background-color: $c-zinc-0;
 
@@ -20,6 +21,7 @@
   }
 
   .brand-slogan-1 {
+    font-size: $f-size-extra-large;
     span {
       &:first-child {
         color: $c-accent-light;
@@ -179,7 +181,7 @@
     width: 100%;
     justify-content: center;
 
-    padding: $p-container-tablet;
+    padding: $p-container-mobile;
 
   }
 
@@ -188,13 +190,12 @@
     align-self: center;
 
     .brand-slogan-1 {
-      font-size: $f-size-large;
+      font-size: $f-size-extra-large;
     }
   }
   .hero-image {
     grid-area: image;
-    margin-left: 3rem;
-    width: 20rem;
+    width: 18rem;
 
   }
   .hero-buttons {
@@ -216,7 +217,7 @@
 // color theme
 .dark {
   .hero {
-    background-color: $c-zinc-750;
+    background-color: $c-zinc-775;
   }
 
   .hero-text {
@@ -250,3 +251,44 @@
     }
   }
 }
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hero{
+      padding: $p-container-tablet;
+    }
+
+    .hero-image {
+      grid-area: image;
+      width: 18rem;
+      margin-left: 6rem;
+  
+    }
+
+
+.hero-social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  position: relative;
+  bottom: 19.5rem;
+  left: -3rem;
+
+  margin-bottom: -9.5rem;
+
+  span{
+    font-size: 1.25rem;
+    color: $c-zinc-400;
+
+    &:hover{
+      cursor: pointer;
+      color: $c-accent-light;
+    }
+  }
+}
+
+    
+}
+
