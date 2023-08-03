@@ -59,7 +59,7 @@
   transition: all 0.5s ease-in-out;
 
   width: 14rem;
-  min-height: 19rem;
+  min-height:25rem;
   background-color: $c-zinc-0;
   box-shadow: $box-shadow-I;
 
@@ -97,7 +97,7 @@
 
 .card-title,
 .card-text {
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .card-title {
@@ -113,8 +113,8 @@
   text-align: center;
   font-size: $f-size-normal;
   min-height: 11rem;
-  height: 11rem;
-  margin: 1rem 0;
+  // height: 11rem;
+  // margin: 1rem 0;
   span {
     font-weight: $f-weight-semibold;
   }
@@ -123,9 +123,9 @@
 .card-button {
   font-size: $f-size-normal;
   font-weight: $f-weight-semibold;
-  text-decoration: none;
+  // text-decoration: none;
   width: 100%;
-  text-align: center;
+  // text-align: center;
   border-radius: 0 0 $b-radious-normal $b-radious-normal;
   padding: 1rem 0;
 }
@@ -183,10 +183,36 @@
 
     margin-top: 3rem;
   }
+
+
+.card {
+  transition: all 0.5s ease-in-out;
+
+  width: 16rem;
+  // min-height:25rem;
+}
+
+  .card-text {
+    text-align: center;
+    font-size: $f-size-normal;
+    height: 16rem;
+    // margin: 1rem 0;
+    span {
+      font-weight: $f-weight-semibold;
+    }
+  }
+
+  .card-title,
+.card-text {
+  padding: 0 2rem;
+}
+
+  
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  
   .services {
     padding: $p-container-tablet;
   }
@@ -205,5 +231,11 @@
     .card:nth-child(3) {
       transform: translateX(300%);
     }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .services {
+    padding: $p-container-desktop;
   }
 }

@@ -1,0 +1,140 @@
+@import "./partials/variables";
+
+footer {
+  p {
+    font-size: $f-size-normal;
+    color: $c-zinc-0;
+  }
+  .bottom {
+    background-color: $c-accent-secondary-light;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+
+    padding: $p-container-mobile;
+
+    p,
+    h2,
+    span,
+    a {
+      font-size: $f-size-normal;
+
+      color: $c-zinc-0;
+    }
+    background-color: $c-accent-light;
+    .footer-item:nth-child(1) {
+      .footer-title {
+        font-size: $f-size-extra-large;
+        span {
+          color: $c-accent-secondary-light;
+          font-size: $f-size-extra-large;
+        }
+      }
+    }
+    .footer-item:nth-child(2),
+    .footer-item:nth-child(3) {
+      .footer-title {
+        font-size: $f-size-normal;
+        font-weight: $f-weight-semibold;
+      }
+      display: flex;
+      flex-direction: column;
+      a {
+        text-decoration: none;
+      }
+      .social-midia {
+        margin-top: 1rem;
+        .social-title {
+          font-weight: $f-weight-semibold;
+        }
+        .icons {
+          .icon {
+            font-size: $f-size-large;
+            text-decoration: none;
+            color: $c-zinc-0;
+            font-weight: $f-weight-regular;
+            &:hover{
+              color: $c-accent-hover-light;
+            }
+          }
+
+          gap: 0.5rem;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+
+.dark{
+
+footer {
+  p {
+    color: $c-zinc-800;
+  }
+  .bottom {
+    background-color: $c-accent-secondary-dark;
+  }
+
+  .top {
+
+    p,
+    h2,
+    span,
+    a {
+
+      color: $c-zinc-300;
+    }
+
+
+    .menu-item{
+      &:hover{
+        color: $c-accent-secondary-hover-dark;
+      }
+    }
+    background-color: $c-accent-dark;
+    .footer-item:nth-child(1) {
+      .footer-title {
+        span {
+          color: $c-accent-secondary-dark;
+        }
+      }
+    }
+    .footer-item:nth-child(2),
+    .footer-item:nth-child(3) {
+      .social-midia {
+        .icons {
+          .icon {
+            &:hover{
+              color: $c-accent-secondary-hover-dark;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+}
+
+@media only screen and (min-width: 768px) {
+footer{
+
+  .top{
+    display: flex;
+    flex-direction: row;
+
+    // padding: $p-container-tablet;
+    // flex-wrap: nowrap;
+  }
+}
+}

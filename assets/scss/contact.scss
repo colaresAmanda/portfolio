@@ -1,0 +1,222 @@
+@import "./partials/variables";
+
+.contact {
+  padding: $p-container-mobile;
+  background-color: $c-zinc-100;
+}
+
+.contact-container {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  p {
+    font-size: $f-size-normal;
+  }
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .icon {
+      padding: 0.5rem;
+      background-color: $c-accent-light;
+      border-radius: $b-radious-small;
+      color: $c-zinc-0;
+    }
+  }
+}
+
+.contact .social-midia {
+  .icons {
+    display: flex;
+    gap: 0.5rem;
+
+    a {
+      text-decoration: none;
+    }
+    .icon {
+      font-size: $f-size-large;
+      padding: 0.5rem;
+      text-decoration: none;
+      color: $c-zinc-400;
+      &:hover {
+        color: $c-accent-light;
+      }
+    }
+  }
+}
+
+form {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: $c-zinc-0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: $b-radious-normal;
+  h3 {
+    text-align: center;
+    font-size: $f-size-medium;
+    margin-bottom: 1rem;
+  }
+  label {
+    font-size: $f-size-small;
+  }
+  input,
+  textarea {
+    font-size: $f-size-normal;
+    border-radius: $b-radious-small;
+  }
+
+  input,
+  textarea {
+    border: thin solid transparent;
+    background-color: $c-zinc-50;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    outline: none;
+    &:focus {
+      border: thin solid $c-accent-light;
+      border-radius: $b-radious-small;
+    }
+  }
+
+  input[type="submit"] {
+    height: inherit;
+  }
+}
+
+
+.dark{
+  .contact{
+  background-color: $c-zinc-750;
+
+
+  .contact-container {
+    p {
+      color: $c-zinc-0;
+      font-size: $f-size-normal;
+    }
+  }
+  .contact-info {
+    .contact-item {
+  
+      .icon {
+        background-color: $c-accent-dark;
+        color: $c-zinc-0;
+      }
+    }
+  }
+
+
+  .social-midia {
+    .icons {
+      display: flex;
+      gap: 0.5rem;
+  
+      a {
+        text-decoration: none;
+      }
+      .icon {
+        color: $c-zinc-400;
+        &:hover {
+          color: $c-accent-dark;
+        }
+      }
+    }
+  }
+
+
+  form {
+    background-color: $c-zinc-800;
+  
+    h3 {
+      color: $c-zinc-0;
+    }
+    label {
+      color: $c-zinc-0;
+    }
+    
+  
+    input,
+    textarea {
+      border: thin solid transparent;
+      background-color: $c-zinc-775;
+      color: $c-zinc-400;
+
+      &:focus {
+      color: $c-zinc-0;
+        border: thin solid $c-accent-dark;
+      }
+    }
+  
+  
+  }
+  
+  }
+}
+
+.contact {
+  .contact-container {
+    transition: transform 0.7s ease-in-out;
+
+    transform: translateX(-200%);
+  }
+  form {
+    transition: transform 0.7s ease-in-out;
+
+    transform: translateX(200%);
+  }
+  .title {
+    transition: transform 0.7s ease-in-out;
+
+    transform: translateX(-100%);
+  }
+}
+.contact.visible {
+  .contact-container {
+    transition: transform 0.7s ease-in-out;
+    transform: translateX(0);
+  }
+  form {
+    transition: transform 0.7s ease-in-out;
+    transform: translateX(0);
+  }
+  .title {
+    transition: transform 0.8s ease-in-out;
+    transform: translateX(0);
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  .contact {
+    padding: $p-container-tablet;
+  }
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .contact-container {
+      width: 45%;
+      // background-color: red;
+    }
+    form {
+      width: 25rem;
+      margin-top: -2rem;
+    }
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .contact {
+    padding: $p-container-desktop;
+  }
+}

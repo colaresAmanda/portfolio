@@ -58,7 +58,7 @@ $f-c-dark: $c-zinc-800;
 $f-size-extra-large: 2rem;
 $f-size-large: 1.5rem;
 $f-size-medium: 1rem;
-$f-size-normal: 0.75rem;
+$f-size-normal: 0.875rem;
 $f-size-small: 0.625rem;
 $f-size-extra-small: 0.5rem;
 
@@ -71,11 +71,18 @@ $f-weight-semibold: 600;
 $b-radious-normal: .5rem;
 $b-radious-small: .25rem;
 
-
 $box-shadow-I: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 
 $p-container-mobile: 2rem 2.5rem;
 $p-container-tablet: 3rem 10rem;
+$p-container-desktop: 5rem 25rem;
 
-$colors: hsl(262, 100%, 60%), hsl(230, 100%, 70%), hsl(93, 100%, 50%), hsl(294, 100%, 75%),hsl(33, 100%, 60%), #FF5E6E;
+$colors: hsl(262, 100%, 60%), hsl(230, 100%, 70%), hsl(101, 100%, 40%), hsl(294, 100%, 75%),hsl(33, 100%, 60%), #FF5E6E;
+$colors-dark: hsl(262, 100%, 20%), hsl(230, 100%, 50%), hsl(101, 100%, 30%), hsl(294, 100%, 55%),hsl(33, 100%, 40%), hsl(354, 100%, 40%);
+
+// .dark{
+// // $colors: hsl(262, 100%, 30%), hsl(0, 100%, 70%), hsl(101, 100%, 40%), hsl(294, 100%, 75%),hsl(33, 100%, 60%), #FF5E6E;
+// $colors: #ff00ff, #00ff00, #00ffff, #ff0000, #ffff00, #0000ff;
+
+// }

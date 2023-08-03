@@ -48,7 +48,7 @@
 
 .about-me-description {
   margin-top: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   text-align: justify;
 }
 
@@ -102,7 +102,7 @@
   border-radius: 0.5rem;
 }
 .soft-skills .skill .skill-container p {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 .soft-skills .skill .skill-container .skill-icon {
   font-size: 2rem;
@@ -113,7 +113,7 @@
 }
 .dark .about-me-description {
   margin-top: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   text-align: justify;
   color: #fff;
 }
@@ -139,7 +139,7 @@
   border-radius: 0.5rem;
 }
 .dark .soft-skills .skill .skill-container p {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 .dark .soft-skills .skill .skill-container .skill-icon {
   font-size: 2rem;
@@ -164,6 +164,11 @@
   }
   .cv-button {
     grid-area: cv-button;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .about-me {
+    padding: 5rem 25rem;
   }
 }
 

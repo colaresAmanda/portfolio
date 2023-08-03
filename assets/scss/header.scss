@@ -48,7 +48,7 @@ nav {
   .content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 
     align-items: center;
     .menu-item.current a {
@@ -228,4 +228,11 @@ input[type="checkbox"]:checked + .hamburguer-icon span {
     background: linear-gradient(to left, $c-zinc-300 50%, $c-zinc-800 50%) right;
     background-size: 210%;
   }
+}
+
+
+@media only screen and (min-width: 1600px) {
+nav{
+  padding: 1rem;
+}
 }

@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="./assets/css/services.css" />
     <link rel="stylesheet" href="./assets/css/about-me.css" />
     <link rel="stylesheet" href="./assets/css/education.css" />
+    <link rel="stylesheet" href="./assets/css/projects.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
 
     <!-- icons -->
     <link rel="stylesheet" href="./assets/fonts/style.css" />
@@ -124,7 +127,7 @@
               <span>forma clara</span> e <span>eficiente</span>.
             </p>
 
-            <a href="#projects&type=design" class="card-button">Ver Projetos</a>
+            <div class="card-button"></div>
           </div>
           <div class="card">
             <i class="card-icon icon-computer"></i>
@@ -135,9 +138,7 @@
               usuário dinâmica e agradável.
             </p>
 
-            <a href="#projects&type=frontend" class="card-button"
-              >Ver Projetos</a
-            >
+            <div class="card-button"></div>
           </div>
           <div class="card">
             <i class="card-icon icon-puzzle"></i>
@@ -148,9 +149,7 @@
               um funcionamento eficiente e confiável dos aplicativos e sistemas.
             </p>
 
-            <a href="#projects&type=backend" class="card-button"
-              >Ver Projetos</a
-            >
+            <div class="card-button"></div>
           </div>
         </div>
       </section>
@@ -159,14 +158,15 @@
 
         <div class="content">
           <p class="about-me-description">
-            Me chamo Amanda, tenho 19 anos e acabei de me formar como técnica em
-            informática. Atualmente trabalho na área de TI de uma escola e busco
-            migrar para a área de desenvolvimento. Sou muito interessada no
-            desenvolvimento para web, gosto de produzir tanto o design quanto o
-            código final. Atualmente, estou aprofundando meus conhecimentos no
-            frontend, estudando HTML, Sass e JavaScript. Meu objetivo é utilizar
-            as melhores tecnologias para desenvolver aplicações dinâmicas e que
-            visam a usabilidade do usuário.
+            Me chamo Amanda, tenho 20 anos e acabei de me formar como técnica em
+            informática. Já atuo na área de TI, atualmente trabalho no setor de
+            informática de uma escola, porém meu objetivo profissional é a área
+            de desenvolvimento. Sou muito interessada no desenvolvimento para
+            web, gosto de produzir desde o design até o código final.
+            Atualmente, estou aprofundando meus conhecimentos no frontend,
+            estudando HTML, Sass, JavaScript e o framework que escolhi foi o
+            React. Meu foco é desenvolver aplicações dinâmicas e que visam a
+            usabilidade do usuário.
           </p>
 
           <div class="soft-skills">
@@ -192,13 +192,17 @@
               </div>
             </div>
           </div>
-          <a class="cv-button button secondary-button">Curriculum vitæ</a>
+          <a class="cv-button button secondary-button">Baixar currículo</a>
         </div>
       </section>
       <section class="education" id="education">
         <div class="titles">
-          <h2 class="education-title selected" id="education-title-education">Educação</h2>
-          <h2 class="education-title" id="education-title-certification">Certificados</h2>
+          <h2 class="education-title selected" id="education-title-education">
+            Educação
+          </h2>
+          <h2 class="education-title" id="education-title-certification">
+            Certificados
+          </h2>
         </div>
 
         <div class="education-container">
@@ -213,20 +217,11 @@
                   <div class="content">
                     <p class="content-title">Programa Nova Geração</p>
                     <p class="text">
-                      Nesse programa, nós tive que completar uma trilha na
+                      Nesse programa, tive que completar uma trilha na
                       plataforma da Alura onde aproveitei para rever os
                       conceitos de lógica de programação, manipulação do DOM com
                       JavaScript, orientação a objetos e polimorfismo com Java.
                     </p>
-                  </div>
-                </div>
-
-                <div class="right-area">
-                  <div class="img-container">
-                    <img
-                      src="https://cdn.treedis.com/clients/10288/logo.png"
-                      alt="Instituto Caldeira Logo"
-                    />
                   </div>
                 </div>
               </div>
@@ -245,19 +240,10 @@
                     </p>
                     <p class="text">
                       Neste curso aprendi sobre algumas metodologias agéis como
-                      Scrum e Kanban, Aprendi também sobre orientação a objetos
+                      Scrum e Kanban. Aprendi também sobre orientação a objetos
                       e desenvolvimento web com C# utilizando o .NET 5 e padrão
                       MVC.
                     </p>
-                  </div>
-                </div>
-
-                <div class="right-area">
-                  <div class="img-container">
-                    <img
-                      src="https://logodownload.org/wp-content/uploads/2014/10/senac-logo-0.png"
-                      alt="Senac Logo"
-                    />
                   </div>
                 </div>
               </div>
@@ -274,18 +260,9 @@
                     <p class="content-title">Técnico em informática</p>
                     <p class="text">
                       Durante o curso tive contato com diversas tecnologias.
-                      Aprendi desde lógica de programação com C até
+                      Aprendi desde lógica de programação em C até
                       desenvolvimento web utilizando Javascript.
                     </p>
-                  </div>
-                </div>
-
-                <div class="right-area">
-                  <div class="img-container">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Instituto_Federal_Marca_2015.svg/1200px-Instituto_Federal_Marca_2015.svg.png"
-                      alt="IFSUL Logo"
-                    />
                   </div>
                 </div>
               </div>
@@ -294,113 +271,362 @@
 
           <div class="certifications">
             <!-- <div class="certifications-wrapper"> -->
-              <div class="certification">
-                <div class="left-area">
-                  <p>Instituto Caldeira</p>
-                  <h3 class="certification-title">Nova geração | Programação</h3>
-                  <a href="https://cursos.alura.com.br/user/colaresAmanda/fullCertificate/ddc0bbfc218304fcfc02d0f17ab95417" class="certification-link" target="_blank">Acessar certificado</a>
+            <div class="certification">
+              <div class="left-area">
+                <p class="certification-sub">Instituto Caldeira</p>
+                <h3 class="certification-title">Nova geração | Programação</h3>
+                <a
+                  href="https://cursos.alura.com.br/user/colaresAmanda/fullCertificate/ddc0bbfc218304fcfc02d0f17ab95417"
+                  class="certification-link"
+                  target="_blank"
+                  >Acessar certificado</a
+                >
 
-                  <div class="tags">
-                    
-                    <p>Html</p>
-                    <p>Css</p>
-                    <p>Javascript</p>
-                    <p>Java</p>
-                    <p>Git</p>
-                  </div>
-
-                </div>
-                <div class="right-area">
-                  <div class="img-container">
-                    <img
-                      src="https://cdn.treedis.com/clients/10288/logo.png"
-                      alt="Instituto Caldeira Logo"
-                    />
-                  </div>
+                <div class="tags">
+                  <p>Html</p>
+                  <p>Css</p>
+                  <p>Javascript</p>
+                  <p>Java</p>
+                  <p>Git</p>
                 </div>
               </div>
+            </div>
 
+            <div class="certification">
+              <div class="left-area">
+                <p>Matheus Battisti</p>
+                <h3 class="certification-title">React do Zero a Maestria</h3>
+                <a href="#" class="certification-link">Acessar certificado</a>
 
-              <div class="certification">
-                <div class="left-area">
-                  <p>Matheus Battisti</p>
-                  <h3 class="certification-title">React do Zero a Maestria</h3>
-                  <a href="#" class="certification-link">Acessar certificado</a>
-
-                  <div class="tags">
-                    <p>Javascript</p>
-                    <p>Typescript</p>
-                    <p>React</p>
-                    <p>Firebase</p>
-                    <p>Mongodb</p>
-                    <p>Node.js</p>
-
-                  </div>
-                </div>
-                <div class="right-area">
-                  <div class="img-container">
-                    <img
-                      src="https://img-b.udemycdn.com/user/200_H/224646276_6ee6.jpg"
-                      alt="Hora de Codar Logo"
-                    />
-                  </div>
+                <div class="tags">
+                  <p>Javascript</p>
+                  <p>Typescript</p>
+                  <p>React</p>
+                  <p>Firebase</p>
+                  <p>Mongodb</p>
+                  <p>Node.js</p>
                 </div>
               </div>
+            </div>
 
+            <div class="certification">
+              <div class="left-area">
+                <p>English Club</p>
+                <h3 class="certification-title">Inglês</h3>
+                <a href="#" class="certification-link">Acessar certificado</a>
 
-              <div class="certification">
-                <div class="left-area">
-                  <p>English Club</p>
-                  <h3 class="certification-title">Inglês</h3>
-                  <a href="#" class="certification-link">Acessar certificado</a>
-
-                  <div class="tags">
-                   <p>Idiomas</p>
-                  </div>
-                </div>
-                <div class="right-area">
-                  <div class="img-container">
-                    <img
-                      src="https://img-b.udemycdn.com/user/200_H/224646276_6ee6.jpg"
-                      alt="Hora de Codar Logo"
-                    />
-                  </div>
+                <div class="tags">
+                  <p>Idiomas</p>
                 </div>
               </div>
+            </div>
 
-              <div class="certification">
-                <div class="left-area">
-                  <p>Topway</p>
-                  <h3 class="certification-title">Inglês</h3>
-                  <a href="#" class="certification-link">Acessar certificado</a>
+            <div class="certification">
+              <div class="left-area">
+                <p>Topway</p>
+                <h3 class="certification-title">Inglês</h3>
+                <a href="#" class="certification-link">Acessar certificado</a>
 
-                  <div class="tags">
-                   <p>Idiomas</p>
-                  </div>
-                </div>
-                <div class="right-area">
-                  <div class="img-container">
-                    <img
-                      src="https://img-b.udemycdn.com/user/200_H/224646276_6ee6.jpg"
-                      alt="Hora de Codar Logo"
-                    />
-                  </div>
+                <div class="tags">
+                  <p>Idiomas</p>
                 </div>
               </div>
+            </div>
 
-              
             <!-- </div> -->
           </div>
         </div>
       </section>
       <section class="projects" id="projects">
-        <h2>Projects</h2>
+        <h2 class="title">Meus projetos</h2>
+
+        <div class="projects-wrapper">
+          <div class="projects-container">
+            <div class="horizontal-card">
+              <div class="left">
+                <h3 class="horizontal-card-title">Em andamento</h3>
+                <p class="horizontal-card-description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+                  consectetur natus dolorem doloribus incidunt porro accusamus
+                  reprehenderit?
+                </p>
+                <div class="horizontal-card-links">
+                  <a
+                    href="https://cursos.alura.com.br/user/colaresAmanda/fullCertificate/ddc0bbfc218304fcfc02d0f17ab95417"
+                    class="horizontal-card-link"
+                    target="_blank"
+                    >Ver código fonte</a
+                  >
+
+                  <a
+                    href="https://cursos.alura.com.br/user/colaresAmanda/fullCertificate/ddc0bbfc218304fcfc02d0f17ab95417"
+                    class="horizontal-card-link"
+                    target="_blank"
+                    >Ver projeto</a
+                  >
+                </div>
+
+                <div class="tags">
+                  <p>React</p>
+                  <p>Sass</p>
+                  <p>Express</p>
+                  <p>Mongodb</p>
+                </div>
+              </div>
+
+              <div class="right">
+                <img
+                  src="https://user-images.githubusercontent.com/83729891/252121020-09f7fa02-1d9f-48a0-949a-3f1e895d4920.png"
+                  alt="multi-step form image"
+                />
+              </div>
+            </div>
+
+            <div class="horizontal-card">
+              <div class="left">
+                <h3 class="horizontal-card-title">Página de tributo</h3>
+                <p class="horizontal-card-description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+                  consectetur natus dolorem doloribus incidunt porro accusamus
+                  reprehenderit?
+                </p>
+                <div class="horizontal-card-links">
+                  <a
+                    href="https://cursos.alura.com.br/user/colaresAmanda/fullCertificate/ddc0bbfc218304fcfc02d0f17ab95417"
+                    class="horizontal-card-link"
+                    target="_blank"
+                    >Ver código fonte</a
+                  >
+
+                  <a
+                    href="https://cursos.alura.com.br/user/colaresAmanda/fullCertificate/ddc0bbfc218304fcfc02d0f17ab95417"
+                    class="horizontal-card-link"
+                    target="_blank"
+                    >Ver projeto</a
+                  >
+                </div>
+
+                <div class="tags">
+                  <p>React</p>
+                  <p>Sass</p>
+                  <p>Express</p>
+                  <p>Mongodb</p>
+                </div>
+              </div>
+
+              <div class="right">
+                <img
+                  src="https://user-images.githubusercontent.com/83729891/252121020-09f7fa02-1d9f-48a0-949a-3f1e895d4920.png"
+                  alt="multi-step form image"
+                />
+              </div>
+            </div>
+
+            <div class="horizontal-card">
+              <div class="left">
+                <h3 class="horizontal-card-title">
+                  Formulário de múltiplas etapas
+                </h3>
+                <div class="horizontal-card-links">
+                  <a
+                    href="https://cursos.alura.com.br/user/colaresAmanda/fullCertificate/ddc0bbfc218304fcfc02d0f17ab95417"
+                    class="horizontal-card-link"
+                    target="_blank"
+                    >Ver código fonte</a
+                  >
+
+                  <a
+                    href="https://cursos.alura.com.br/user/colaresAmanda/fullCertificate/ddc0bbfc218304fcfc02d0f17ab95417"
+                    class="horizontal-card-link"
+                    target="_blank"
+                    >Ver projeto</a
+                  >
+                </div>
+                <div class="tags">
+                  <p>Html</p>
+                  <p>Css</p>
+                  <p>Javascript</p>
+                </div>
+              </div>
+              <div class="right">
+                <img
+                  src="https://user-images.githubusercontent.com/83729891/252121020-09f7fa02-1d9f-48a0-949a-3f1e895d4920.png"
+                  alt="multi-step form image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="hard-skills">
+            <h3 class="subtitle">Hard Skills</h3>
+            <div class="skills">
+              <figure class="skill">
+                <img src="./assets/img/svg_repo/vscode_icons/html.svg" />
+                <figcaption>HTML</figcaption>
+              </figure>
+              <figure class="skill">
+                <img src="./assets/img/svg_repo/vscode_icons/css.svg" />
+                <figcaption>CSS</figcaption>
+              </figure>
+              <figure class="skill">
+                <img src="./assets/img/svg_repo/vscode_icons/scss.svg" />
+                <figcaption>Sass</figcaption>
+              </figure>
+              <figure class="skill">
+                <img src="./assets/img/svg_repo/vscode_icons/js.svg" />
+                <figcaption>Javascript</figcaption>
+              </figure>
+              <figure class="skill">
+                <img src="./assets/img/svg_repo/vscode_icons/git.svg" />
+                <figcaption>Git</figcaption>
+              </figure>
+              <figure class="skill">
+                <img src="./assets/img/svg_repo/vscode_icons/figma.svg" />
+                <figcaption>Figma</figcaption>
+              </figure>
+              <figure class="skill">
+                <img src="./assets/img/svg_repo/vscode_icons/java.svg" />
+                <figcaption>Java</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="contact" id="contact">
-        <h2>Contact</h2>
+        <h2 class="title">Contato</h2>
+        <div class="contact-wrapper">
+          <div class="contact-container">
+            <p class="contact-decription">
+              Tem alguma ideia, ficou com alguma dúvida ou quer apenas
+              conversar? Mande uma mensagem!
+            </p>
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="icon-mail icon"></div>
+
+                <p>colares.amd@gmail.com</p>
+              </div>
+              <div class="contact-item">
+                <div class="icon-phone icon"></div>
+                <p>+55 (53) 9 9999-3107</p>
+              </div>
+            </div>
+
+            <div class="social-midia">
+              <p class="social-title">Redes Sociais</p>
+              <div class="icons">
+                <a
+                  href="https://www.linkedin.com/in/colaresamanda/"
+                  target="_blank"
+                >
+                  <div class="icon-linkedin icon"></div>
+                </a>
+                <a href="https://github.com/colaresAmanda" target="_blank">
+                  <div class="icon-github icon"></div>
+                </a>
+                <a href="https://www.figma.com/@colaresAmanda" target="_blank">
+                  <div class="icon-figma icon"></div>
+                </a>
+                <a
+                  href="https://www.instagram.com/colaresamanda_/"
+                  target="_blank"
+                >
+                  <div class="icon-instagram icon"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form">
+            <h3 class="form-title">Mande um email</h3>
+            <div class="form-controler">
+              <label for="name">Nome</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Digite seu nome"
+              />
+            </div>
+            <div class="form-controler">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Digite seu email"
+              />
+            </div>
+            <div class="form-controler">
+              <label for="message">Mensagem</label>
+              <textarea
+                name="message"
+                id="message"
+                rows="10"
+                placeholder="Digite sua Mensagem"
+              >
+Olá, ...</textarea
+              >
+            </div>
+            <input
+              type="submit"
+              value="Enviar email"
+              class="button primary-button"
+            />
+          </form>
+        </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="top">
+        <div class="footer-item">
+          <h2 class="footer-title">colares<span>Amanda</span></h2>
+          <p>
+            Busco mudar a realidade ao meu redor através da
+            <span>programação</span>.
+          </p>
+        </div>
+        <div class="footer-item">
+          <h2 class="footer-title">Menu</h2>
+          <a href="#" class="menu-item">Início</a>
+          <a href="#" class="menu-item">Sobre mim</a>
+          <a href="#" class="menu-item">Educação</a>
+          <a href="#" class="menu-item">Projetos</a>
+          <a href="#contact" class="menu-item">Contato</a>
+        </div>
+        <div class="footer-item">
+          <h2 class="footer-title">Contato</h2>
+          <p>+55 (53) 9 9999-3107</p>
+          <p>colares.amd@gmail.com</p>
+
+          <div class="social-midia">
+            <p class="social-title">Redes Sociais</p>
+            <div class="icons">
+              <a
+                href="https://www.linkedin.com/in/colaresamanda/"
+                target="_blank"
+              >
+                <div class="icon-linkedin icon"></div>
+              </a>
+              <a href="https://github.com/colaresAmanda" target="_blank">
+                <div class="icon-github icon"></div>
+              </a>
+              <a href="https://www.figma.com/@colaresAmanda" target="_blank">
+                <div class="icon-figma icon"></div>
+              </a>
+              <a
+                href="https://www.instagram.com/colaresamanda_/"
+                target="_blank"
+              >
+                <div class="icon-instagram icon"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>Copyright © 2023 | colaresAmanda</p>
+      </div>
+    </footer>
     <script src="./header.js"></script>
     <script src="./main.js"></script>
   </body>

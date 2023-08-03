@@ -47,7 +47,7 @@ nav {
 .menu .content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
 .menu .content .menu-item.current a {
@@ -56,7 +56,7 @@ nav {
 .menu .content .menu-item a {
   color: #a1a1aa;
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 .menu .content .menu-item a:hover {
   color: #27272a;
@@ -193,6 +193,11 @@ input[type=checkbox]:checked + .hamburguer-icon span:nth-child(3) {
   .toggle-icon {
     background: linear-gradient(to left, #f4f4f5 50%, #27272a 50%) right;
     background-size: 210%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  nav {
+    padding: 1rem;
   }
 }
 

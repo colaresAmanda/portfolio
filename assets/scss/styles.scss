@@ -148,6 +148,30 @@ section {
   }
 }
 
+.tags {
+  overflow: scroll;
+  display: flex;
+  gap: 0.5rem;
+
+  margin-top: 1rem;
+
+  p {
+    padding: .25rem .5rem;
+    border-radius: 1rem;
+    // Use the nth-child selector to assign colors from the list
+    @for $i from 1 through length($colors) {
+      &:nth-child(#{$i}) {
+        color: nth($colors, $i);
+        $backgroundSoft: mix(nth($colors, $i), white, 20%); // Adjust the percentage (30% in this example) as desired
+         background-color: $backgroundSoft;
+      }
+    }
+
+    font-size: $f-size-small !important;
+
+  }
+}
+
 .dark {
   .button {
     
@@ -213,6 +237,24 @@ section {
   color: $c-zinc-0;
   &::after {
     background-color: $c-accent-secondary-dark;
+  }
+}
+
+
+
+.tags {
+
+  p {
+    @for $i from 1 through length($colors) {
+      &:nth-child(#{$i}) {
+        color: nth($colors-dark, $i) !important;
+        $backgroundSoft: mix(nth($colors-dark, $i), white, 45%); // Adjust the percentage (30% in this example) as desired
+         background-color: $backgroundSoft m !important;
+      }
+    }
+
+    font-size: $f-size-small !important;
+
   }
 }
 }
