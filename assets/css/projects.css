@@ -41,6 +41,9 @@
 .horizontal-card a:hover {
   text-decoration: underline;
 }
+.horizontal-card .horizontal-card-title a {
+  color: #27272a;
+}
 .horizontal-card .horizontal-card-links {
   display: flex;
   justify-content: space-between;
@@ -178,10 +181,10 @@
     display: flex;
   }
   .horizontal-card .right img {
-    min-width: 7rem;
-    width: 7rem;
-    min-height: 5rem;
-    height: 5rem;
+    min-width: 10rem;
+    width: 10rem;
+    min-height: 10rem;
+    height: 10rem;
     object-fit: cover;
     transition: transform 0.4s ease;
     border-radius: 0.25rem;

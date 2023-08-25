@@ -34,6 +34,9 @@
     }
   }
 
+  .horizontal-card-title a{
+    color: $c-zinc-800;
+  }
   .horizontal-card-links {
     display: flex;
     justify-content: space-between;
@@ -199,10 +202,10 @@
       justify-content: center;
 
       img {
-        min-width: 7rem;
-        width: 7rem;
-        min-height: 5rem;
-        height: 5rem;
+        min-width: 10rem;
+        width: 10rem;
+        min-height: 10rem;
+        height: 10rem;
         object-fit: cover;
         transition: transform 0.4s ease;
         border-radius: $b-radious-small;
