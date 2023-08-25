@@ -81,6 +81,99 @@ function toggleEducationSection() {
     })
 }
 
+
+
+function sendEmail() {
+    const form = document.querySelector('.contact-form')
+    const formfeedback = document.querySelector('.form-feedback')
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault()
+        const name = form[0].value
+        const email = form[1].value
+        const message = form[2].value
+        const time = 5000
+
+
+        if (!name) {
+            formfeedback.innerHTML = "Digite seu nome"
+            formfeedback.classList.toggle('warning')
+            setTimeout(() => {
+                formfeedback.innerHTML = "";
+                formfeedback.classList.toggle('warning')
+
+            }, time);
+            return
+        }
+
+        if (!email) {
+            formfeedback.innerHTML = "Digite seu email"
+            formfeedback.classList.toggle('warning')
+            setTimeout(() => {
+                formfeedback.innerHTML = "";
+                formfeedback.classList.toggle('warning')
+
+            }, time);
+            return
+        }
+
+        if (!message) {
+            formfeedback.innerHTML = "Digite uma mensagem"
+            formfeedback.classList.toggle('warning')
+
+            setTimeout(() => {
+                formfeedback.innerHTML = "";
+                formfeedback.classList.toggle('warning')
+
+            }, time);
+            return
+        }
+
+
+        // Initialize emailjs with your user ID
+        emailjs.init("iFIDh_f1DSJHjsKT5"); // Replace with your actual user ID
+
+        // Set up the email parameters
+        const emailParams = {
+            from_name: name,
+            from_email: email,
+            message: message,
+        };
+
+        // Use the 'emailjs' library to send the email
+
+
+
+        await emailjs.send("service_7zkf6qs", "template_6h4rjm5", emailParams)
+            .then(function () {
+                console.log("Email sent successfully!");
+                form.reset()
+                formfeedback.innerHTML = "Sua mensagem foi enviada com sucesso"
+                formfeedback.classList.toggle('success')
+
+                setTimeout(() => {
+                    formfeedback.innerHTML = "";
+                    formfeedback.classList.toggle('success')
+
+                }, time);
+            }, function () {
+                console.error("Email could not be sent");
+                formfeedback.innerHTML = "Houve um erro, tente novamente mais tarde"
+                formfeedback.classList.toggle('error')
+
+                setTimeout(() => {
+                    formfeedback.innerHTML = "";
+                    formfeedback.classList.toggle('error')
+
+                }, time);
+            });
+
+
+    });
+
+
+}
+
+
 function init() {
     rotateHeroIcons()
 
@@ -88,6 +181,7 @@ function init() {
     window.addEventListener('scroll', scrollAnimation)
 
     toggleEducationSection()
+    sendEmail()
 }
 
 init()

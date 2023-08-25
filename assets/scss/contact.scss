@@ -61,10 +61,28 @@ form {
   flex-direction: column;
   gap: 0.5rem;
   border-radius: $b-radious-normal;
+
+  .form-feedback{
+    font-size: $f-size-normal;
+    border-radius: $b-radious-small;
+    text-align: center;
+    padding: .5rem 0;
+    margin-bottom: 1re;
+    &.warning{
+    background-color: $c-yellow-500;
+    }
+    &.error{
+      background-color: $c-red-500;
+      }
+      &.success{
+        background-color: $c-green-500;
+        }
+
+  }
   h3 {
     text-align: center;
     font-size: $f-size-medium;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
   }
   label {
     font-size: $f-size-small;
@@ -91,6 +109,8 @@ form {
   input[type="submit"] {
     height: inherit;
   }
+
+
 }
 
 

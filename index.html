@@ -32,7 +32,7 @@
   <body>
     <header>
       <nav>
-        <h1 class="brand-name">colares<span>Amanda</span></h1>
+        <h1 class="brand-name">Amanda <span>Colares</span></h1>
 
         <ul class="menu">
           <div class="content">
@@ -94,13 +94,21 @@
               class="hero-icon"
             />
             <img
-              src="./assets/img/svg_repo/vscode_icons/figma.svg"
+              src="./assets/img/svg_repo/vscode_icons/ts.svg"
               class="hero-icon"
             />
             <img
-              src="./assets/img/svg_repo/vscode_icons/java.svg"
+              src="./assets/img/svg_repo/vscode_icons/react.svg"
               class="hero-icon"
             />
+            <img
+              src="./assets/img/svg_repo/vscode_icons/figma.svg"
+              class="hero-icon"
+            />
+            <!-- <img
+              src="./assets/img/svg_repo/vscode_icons/java.svg"
+              class="hero-icon"
+            /> -->
             <img
               src="./assets/img/svg_repo/vscode_icons/git.svg"
               class="hero-icon"
@@ -350,9 +358,10 @@
                   >
                 </h3>
                 <p class="horizontal-card-description">
-                  O Cruzamendel, um simulador genético, apresenta uma área
-                  integrada de exercícios. Professores podem facilmente criar
-                  atividades, incorporando simulações de modo ágil e direto.
+                  O Cruzamendel é um simulador de genética que apresenta uma
+                  área de exercícios integrada. Os professores podem facilmente
+                  adicionar questões no banco de dados e incorporar as
+                  simulações de modo ágil e direto.
                 </p>
                 <div class="horizontal-card-links">
                   <!-- <a
@@ -363,7 +372,7 @@
                   > -->
 
                   <a
-                    href="https://cursos.alura.com.br/user/colaresAmanda/fullCertificate/ddc0bbfc218304fcfc02d0f17ab95417"
+                    href="https://cruzamendel.netlify.app/"
                     class="horizontal-card-link"
                     target="_blank"
                     >Ver projeto</a
@@ -380,13 +389,13 @@
 
               <div class="right">
                 <img
-                  src="https://i.ibb.co/85nYJv5/Screenshot-2023-08-25-at-08-08-59-Cruzamendel.png"
+                  src="https://i.ibb.co/B31KpXZ/cruzamendel.png"
                   alt="multi-step form image"
                 />
               </div>
             </div>
 
-            <div class="horizontal-card">
+            <!-- <div class="horizontal-card">
               <div class="left">
                 <h3 class="horizontal-card-title">Página de tributo</h3>
                 <p class="horizontal-card-description">
@@ -424,9 +433,9 @@
                   alt="multi-step form image"
                 />
               </div>
-            </div>
+            </div> -->
 
-            <div class="horizontal-card">
+            <!-- <div class="horizontal-card">
               <div class="left">
                 <h3 class="horizontal-card-title">
                   Formulário de múltiplas etapas
@@ -458,7 +467,7 @@
                   alt="multi-step form image"
                 />
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div class="hard-skills">
@@ -481,6 +490,14 @@
                 <figcaption>Javascript</figcaption>
               </figure>
               <figure class="skill">
+                <img src="./assets/img/svg_repo/vscode_icons/ts.svg" />
+                <figcaption>Typescript</figcaption>
+              </figure>
+              <figure class="skill">
+                <img src="./assets/img/svg_repo/vscode_icons/react.svg" />
+                <figcaption>React</figcaption>
+              </figure>
+              <figure class="skill">
                 <img src="./assets/img/svg_repo/vscode_icons/git.svg" />
                 <figcaption>Git</figcaption>
               </figure>
@@ -488,10 +505,10 @@
                 <img src="./assets/img/svg_repo/vscode_icons/figma.svg" />
                 <figcaption>Figma</figcaption>
               </figure>
-              <figure class="skill">
+              <!-- <figure class="skill">
                 <img src="./assets/img/svg_repo/vscode_icons/java.svg" />
                 <figcaption>Java</figcaption>
-              </figure>
+              </figure> -->
             </div>
           </div>
         </div>
@@ -541,7 +558,8 @@
             </div>
           </div>
           <form class="contact-form">
-            <h3 class="form-title">Mande um email</h3>
+            <h3 class="form-title">Mande um e-mail</h3>
+            <p class="form-feedback"></p>
             <div class="form-controler">
               <label for="name">Nome</label>
               <input
@@ -567,8 +585,7 @@
                 id="message"
                 rows="10"
                 placeholder="Digite sua Mensagem"
-              >
-Olá, ...</textarea
+              ></textarea
               >
             </div>
             <input
@@ -631,6 +648,9 @@ Olá, ...</textarea
         <p>Copyright © 2023 | colaresAmanda</p>
       </div>
     </footer>
+    <!-- Include emailjs library -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     <script src="./header.js"></script>
     <script src="./main.js"></script>
   </body>

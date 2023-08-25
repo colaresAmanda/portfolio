@@ -95,8 +95,19 @@ section:nth-child(even) .title::after {
   background-color: #B1F279;
 }
 
+/* Hide the scrollbar track */
+.tags::-webkit-scrollbar {
+  width: 0.5em; /* Adjust as needed */
+}
+
+/* Hide the scrollbar thumb */
+.tags::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
 .tags {
   overflow: scroll;
+  scrollbar-width: none; /* Hide the scrollbar in Firefox */
   display: flex;
   gap: 0.5rem;
   margin-top: 1rem;

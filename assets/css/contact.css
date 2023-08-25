@@ -65,10 +65,25 @@ form {
   gap: 0.5rem;
   border-radius: 0.5rem;
 }
+form .form-feedback {
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin-bottom: 1re;
+}
+form .form-feedback.warning {
+  background-color: #f2b244;
+}
+form .form-feedback.error {
+  background-color: #f24444;
+}
+form .form-feedback.success {
+  background-color: #84f216;
+}
 form h3 {
   text-align: center;
   font-size: 1rem;
-  margin-bottom: 1rem;
 }
 form label {
   font-size: 0.625rem;
