@@ -42,6 +42,9 @@
 .education .titles .education-title:nth-child(2)::after {
   margin-left: -0.5rem;
 }
+.education .item-content .text {
+  text-align: justify;
+}
 
 .dark .education {
   background-color: #38383D;
@@ -117,7 +120,7 @@
   border-radius: 0.5rem;
 }
 .item-content .header-info {
-  display: flex;
+  margin-bottom: 1rem;
   justify-content: space-between;
 }
 .item-content .header-info p {
@@ -191,7 +194,7 @@
 }
 
 .education {
-  min-height: 57rem;
+  min-height: 85rem;
 }
 
 .certifications {
@@ -297,6 +300,9 @@
     position: absolute;
     left: 98.5%;
   }
+  .education {
+    min-height: 75rem;
+  }
 }
 @media only screen and (min-width: 992px) {
   .education {
@@ -345,7 +351,10 @@
     padding: 1.5rem;
   }
   .education {
-    min-height: 50rem;
+    min-height: 60rem;
+  }
+  .item-content .header-info {
+    display: flex;
   }
 }
 @media only screen and (min-width: 1600px) {

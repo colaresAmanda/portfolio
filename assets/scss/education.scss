@@ -45,6 +45,13 @@
       }
     }
   }
+
+  .item-content{
+    .text{
+      text-align: justify;
+    }
+  }
+  
 }
 
 .dark {
@@ -85,6 +92,7 @@
       p {
         color: $c-zinc-0;
       }
+      
 
       &::before {
         background-color: $c-zinc-750;
@@ -156,7 +164,8 @@
 
   border-radius: $b-radious-normal;
   .header-info {
-    display: flex;
+    // display: flex;
+    margin-bottom: 1rem;
     justify-content: space-between;
 
     p {
@@ -250,7 +259,7 @@
 }
 
 .education {
-  min-height: 57rem;
+  min-height: 85rem;
 }
 
 .certifications {
@@ -395,6 +404,9 @@
       }
     }
   }
+  .education {
+    min-height: 75rem;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -463,8 +475,16 @@
   }
 
   .education {
-    min-height: 50rem;
+    min-height: 60rem;
   }
+
+
+.item-content {
+  .header-info {
+    display: flex;
+
+  }
+}
 }
 
 @media only screen and (min-width: 1600px) {
