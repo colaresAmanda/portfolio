@@ -227,6 +227,9 @@
     left: -3rem;
     margin-bottom: -9.5rem;
   }
+  .hero-social-icons a {
+    text-decoration: none;
+  }
   .hero-social-icons span {
     font-size: 1.25rem;
     color: #a1a1aa;

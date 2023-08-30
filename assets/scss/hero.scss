@@ -277,10 +277,13 @@
   left: -3rem;
 
   margin-bottom: -9.5rem;
-
+  a{
+    text-decoration: none;
+  }
   span{
     font-size: 1.25rem;
     color: $c-zinc-400;
+
 
     &:hover{
       cursor: pointer;
